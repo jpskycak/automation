@@ -1,0 +1,2 @@
+SLACK_TOKEN = ''
+CMS_PASS = ''
