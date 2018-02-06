@@ -1,2 +1,4 @@
-!!!Lagrange multipliers
-In applications, when we want to maximize or minimize a function ''f'', there is often a constraint that some other function ''g'' (which represents some kind of resource) must be held at a constant value ''k''. The method of lagrange multipliers leverages the fact that, when ''f'' attains an optimum, its gradient must be parallel to that of ''g''. That is, {eq} \nabla f = \lambda \nabla g {/eq} for some constant {eq}\lambda{/eq}.
+!!!Dot product
+The dot product quantifies the degree to which a vector projects onto another vector. The most familiar way to calculate it is by summing the products of corresponding components, but another way uses the magnitudes of the vectors and the angle between them: 
+{eq} a\cdot b = |a||b|\cos \theta {/eq} 
+ where {eq} \theta {/eq} is the angle between the two vectors
