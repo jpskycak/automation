@@ -1,4 +1,2 @@
-!!!Dot product
-The dot product quantifies the degree to which a vector projects onto another vector. The most familiar way to calculate it is by summing the products of corresponding components, but another way uses the magnitudes of the vectors and the angle between them: 
-{eq} a\cdot b = |a||b|\cos \theta {/eq} 
- where {eq} \theta {/eq} is the angle between the two vectors
+!!!Directional Derivatives
+Computing the partial derivatives of a function {eq}f(x,y,z){/eq} and assigning them as components of a vector produces the gradient of the function. It gives the magnitude and direction of greatest increase of the function. The magnitude of increase in another direction can be computed as the dot product of the new direction vector with the gradient.
