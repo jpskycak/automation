@@ -1,3 +1,2 @@
-!!!Cross product
-The area of that parallelogram whose edges consist of a pair of vectors is obtained by performing the cross product of those two vectors. This vector is obtained by the rule 
-{eq} \langle a_1, a_2, a_3 \rangle \times \langle b_1, b_2, b_3 \rangle = \langle a_2b_3 - a_3b_2, a_3b_1 - a_1b_3, a_1b_2 -a_2b_1 \rangle {/eq}
+!!!Line integrals
+A line integral's path can be broken up into segments, and the integral can be computed separately over these segments. Each segment can be expressed as a line with a single parameter, so the integrals can written in terms of that parameter. Then, the entire integral can be simplified into a single-variable integral by writing everything in terms of the parameter.
