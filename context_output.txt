@@ -1,2 +1,2 @@
 !!!Line integrals
-A line integral's path can be broken up into segments, and the integral can be computed separately over these segments. Each segment can be expressed as a line with a single parameter, so the integrals can written in terms of that parameter. Then, the entire integral can be simplified into a single-variable integral by writing everything in terms of the parameter.
+Line integrals can be separated over multiple segments. For each segment, it is easiest to parameterize the variables and write all of the variables and differentials in terms of the parameter. This way, the entire integral may be written in terms of the parameter, causing it to simplify to a single-variable integral.
