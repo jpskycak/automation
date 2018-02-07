@@ -1,2 +1,2 @@
-!!!Directional Derivatives
-Computing the partial derivatives of a function {eq}f(x,y,z){/eq} and assigning them as components of a vector produces the gradient of the function. It gives the magnitude and direction of greatest increase of the function. The magnitude of increase in another direction can be computed as the dot product of the new direction vector with the gradient.
+!!!Tangent lines
+The tangent line to a curve at a point is the line which passes through that point with the same slope as the function at that point. Using the function's derivative, we can find the slope of the tangent line.
