@@ -1,2 +1,4 @@
-!!!Tangent planes
-If one assigns the variable coefficients in an equation for a plane as components in a vector, that vector will be perpendicular to the plane. Moreover it is called the plane's standard normal vector. Also, ince the gradient of a function is always perpendicular to its level curve, the gradient is always perpendicular to its tangent plane.
+!!!Kinematics
+When an object is subject to constant acceleration, its trajectory follows the equations of kinematics, which can be manipulated using algebra. If the object has initial position {eq}r_0{/eq} and initial velocity {/eq}v_0{/eq} and is subject to a force causing constant acceleration {eq}a{/eq}, then after a time {eq}t{/eq} the function's position and velocity are given by
+{eq}r(t)=r_0+v_0t+rac{a}{2}t^2{/eq}
+{eq}v(t)=v_0+at{/eq}

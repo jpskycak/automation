@@ -187,12 +187,12 @@ separable_differential_equations_switches = {
 dot_product_template = ["{part1} {part2}"]
 dot_product_switches = {
     "part1": [
-        "The dot product measures the projection of one vector onto another.",
-        "The dot product quantifies the overlap of two vectors.",
-        "The projection of one vector onto another can be quantified by the dot product.",
-        "The overlap of one vector onto another can be measured by the dot product.",
-        "The dot product measures the degree to which two vectors overlap.",
-        "The dot product quantifies the degree to which a vector projects onto another vector."
+        "The dot product measures the projection of one vector onto another and can be used to tell whether two vectors are orthogonal.",
+        "The dot product quantifies the overlap of two vectors and can be used to tell whether two vectors are orthogonal..",
+        "The projection of one vector onto another can be quantified by the dot product. It can also be used to tell whether two vectors are orthogonal.",
+        "The overlap of one vector onto another can be measured by the dot product. It can also be used to tell whether two vectors are orthogonal.",
+        "The dot product measures the degree to which two vectors overlap and can be used to tell whether two vectors are orthogonal.",
+        "The dot product quantifies the degree to which a vector projects onto another vector and can be used to tell whether two vectors are orthogonal."
     ],
     "part2": [
         "The most familiar way to calculate it is by summing the products of corresponding components, but another way uses the magnitudes of the vectors and the angle between them: \n{eq} a\\cdot b = |a||b|\\cos \\theta {/eq} \n where {eq} \\theta {/eq} is the angle between the two vectors.",
@@ -355,7 +355,7 @@ derivative_as_rate_of_change_switches = {
 ### TANGENT PLANES ###
 ######################
 
-tangent_planes_template = ["{part1} {part2}"]
+tangent_planes_template = ["{part1} {part2} {part3}"]
 tangent_planes_switches = {
     "part1": [
         "The standard normal vector for a plane is given by the coefficients on the variables.",
@@ -371,5 +371,77 @@ tangent_planes_switches = {
         "Therefore, the tangent plane for a level curve has as its coefficients the partial derivatives of the function.",
         "Thus, to find the tangent plane for a function, we can simply use the partial derivatives as the variable coefficients.",
         "Consequently, one can use partial derivatives as the variable coefficients when constructing the tangent plane to a function."
+    ]
+}
+
+########################
+### L'HOPITAL'S RULE ###
+########################
+
+lhopitals_rule_template = ["{part1} {part2} {part3}"]
+lhopitals_rule_switches = {
+    "part1": [
+        "L'Hopital's rule can be be used to find limits which take indeterminate form of 0 divided by 0 or infinity divided by infinity.",
+        "When substitution would cause a limit to go to 0 divided by 0 or infinity divided by infinity, it is said to be of indeterminate form, and L'Hopital's rule can be applied.",
+        "A limit which goes to 0 divided by 0 or infinity divided by infinity is said to be of indeterminate form. In these limits, L'Hopital's rule applies.",
+        "L'Hopital's rule applies to limits which are indeterminate in the sense that they go to 0 divided by 0 or infinity divided by infinity.",
+        "When a limit is indeterminate because it goes to 0 divided by 0 or infinity divided by infinity, L'Hopital's rule can be used."
+    ],
+    "part2": [
+        "L'Hopital's rule tells us that for a limit having indeterminate form of 0 divided by 0 or infinity divided by infinity, we can differentiate the numerator and denominator of the limit argument, independently, and the limit will remain unchanged.",
+        "L'Hopital's rule tells us that we can independently differentiate the numerator and denominator of the limit argument without changing the result, if the limit has indeterminate form of 0 divided by 0 or infinity divided by infinity.",
+        "According to L'Hopital's rule, the limit remains unchanged if we independently differentiate the numerator and denominator of the limit argument, provided the limit has indeterminate form of 0 divided by 0 or infinity divided by infinity."
+    ],
+    "part3": [
+        "This is useful because differentiating the numerator and denominator often simplifies the limit and allows us to get a real number answer via substitution.",
+        "Differentiating the numerator and denominator often causes the indeterminate limit to transform into a limit which yields a real number answer via substitution.",
+        "After using L'Hopital's rule, the limit sometimes turns into one which can be solved via direct substitution."
+    ]
+}
+
+###################
+### HOOKE'S LAW ###
+###################
+
+hookes_law_template = ["{part1} {part2} {part3}"]
+hookes_law_switches = {
+    "part1": [
+        "Hooke's law states that the force needed to extend or compress a spring by some distance is proportional to the distance.",
+        "According to Hooke's law, the force needed to extend or compress a spring by some distance varies proportionally with the distance itself.",
+        "Springs are governed by Hooke's law, which says that the force needed to extend or compress a spring by some distance is proportional to the distance.",
+        "When extending or compressing a spring by some distance, Hooke's law applies. It states that that the force needed to extend or compress a spring by some distance is proportional to the distance."
+    ],
+    "part2": [
+        "Consequently, the work needed to stretch or compress a spring from {eq}x_0{/eq} units past its normal length to {eq}x_1{/eq} units past its normal length is given by the integral {eq}W = \int_{x_0}^{x_1} kx dx{/eq}.",
+        "Thus, the integral {eq}W = \int_{x_0}^{x_1} kx dx{/eq} gives the work needed to stretch or compress a spring from {eq}x_0{/eq} units past its normal length to {eq}x_1{/eq} units past its normal length.",
+        "As such, stretching or compressing a spring from {eq}x_0{/eq} units past its normal length to {eq}x_1{/eq} units past its normal length requires an amount of work given by {eq}W = \int_{x_0}^{x_1} kx dx{/eq}.",
+        "To stretch or compress a spring from {eq}x_0{/eq} units past its normal length to {eq}x_1{/eq} units past its normal length, then, one must input work equivalent to {eq}W = \int_{x_0}^{x_1} kx dx{/eq}."
+    ],
+    "part3": [
+        "Solving the integral yields {eq}W = \frac{k}{2}(x_1^2 - x_0^2){/eq}.",
+        "The integral is solved by {eq}W = \frac{k}{2}(x_1^2 - x_0^2){/eq}.",
+        "Taking the antiderivative and evaluating at the bounds, the we reach {eq}W = \frac{k}{2}(x_1^2 - x_0^2){/eq}.",
+        "Thus, {eq}W = \frac{k}{2}(x_1^2 - x_0^2){/eq}."
+    ],
+}
+
+##################
+### KINEMATICS ###
+##################
+
+kinematics_template = ["{part1} {part2}"]
+kinematics_switches = {
+    "part1": [
+        "When an object is subject to constant acceleration, its trajectory follows the equations of kinematics, which can be manipulated using algebra.",
+        "The laws of kinematics apply when an object is subject to constant acceleration.",
+        "Finding trajectory of an object subject to constant acceleration involves only algebra.",
+        "To find the trajectory of an object subject to a variable force, we need calculus. However, when the force is constant, all we need is algebra.",
+        "An object subject to a constant force follows a quadratic trajectory."
+    ],
+    "part2": [
+        "If the object has initial position {eq}r_0{/eq} and initial velocity {/eq}v_0{/eq} and is subject to a force causing constant acceleration {eq}a{/eq}, then after a time {eq}t{/eq} the function's position and velocity are given by\n{eq}r(t)=r_0+v_0t+\frac{a}{2}t^2{/eq}\n{eq}v(t)=v_0+at{/eq}",
+        "After a time {eq}t{/eq} the function's position and velocity are given by\n{eq}r(t)=r_0+v_0t+\frac{a}{2}t^2{/eq}\n{eq}v(t)=v_0+at{/eq}\n where {eq}r_0{/eq} and {eq}v_0{/eq} are its initial position and velocity and {eq}a{/eq} is the constant acceleration.",
+        "The function's position and velocity are given by\n{eq}r(t)=r_0+v_0t+\frac{a}{2}t^2{/eq}\n{eq}v(t)=v_0+at{/eq}\n after {eq}t{/eq} time steps, where {eq}r_0{/eq} and {eq}v_0{/eq} are its initial position and velocity and {eq}a{/eq} is the constant acceleration.",
+        "If the function's initial position is given by {eq}r_0{/eq} and initial velocity is given by {/eq}v_0{/eq}, then after {eq}t{/eq} time steps, the function's position and velocity are given by \n{eq}r(t)=r_0+v_0t+\frac{a}{2}t^2{/eq}\n{eq}v(t)=v_0+at{/eq}"
     ]
 }
