@@ -445,3 +445,24 @@ kinematics_switches = {
         "If the function's initial position is given by {eq}r_0{/eq} and initial velocity is given by {/eq}v_0{/eq}, then after {eq}t{/eq} time steps, the function's position and velocity are given by \n{eq}r(t)=r_0+v_0t+\frac{a}{2}t^2{/eq}\n{eq}v(t)=v_0+at{/eq}"
     ]
 }
+
+############################
+### LINEAR APPROXIMATION ###
+############################
+
+linear_approximation_template = ["{part1} {part2}"]
+linear_approximation_switches = {
+    "part1": [
+        "Just as the tangent line is used for approximating single-variable functions, the tangent plane is used for approximating multivariable functions.",
+        "In single-variable calculus, the tangent line is used for linear approximations. In mutivariable calculus, the tangent plane is used for linear approximations.",
+        "The tangent plane is used for approximating multivariable functions, just like the tangent line is used for approximating single-variable functions.",
+        "The tangent line and tangent plane are used for approximating single-variable and multivariable functions, respectively."
+    ],
+    "part2": [
+        "Instead of {eq}\Delta f \\approx f'(x) \Delta x{/eq}, we have {eq}\Delta f \\approx \nabla f(x,y,z) \cdot \langle \Delta x, \Delta y, \Delta z \rangle{/eq}.",
+        "For the tangent plane, we have {eq}\Delta f \\approx \nabla f(x,y,z) \cdot \langle \Delta x, \Delta y, \Delta z \rangle{/eq}, which can be remembered by its similarity to the tangent line approximation, {eq}\Delta f \\approx f'(x) \Delta x{/eq}.",
+        "The tangent plane approximation is {eq}\Delta f \\approx \nabla f(x,y,z) \cdot \langle \Delta x, \Delta y, \Delta z \rangle{/eq}, and it is an extension of the tangent line approximation {eq}\Delta f \\approx f'(x) \Delta x{/eq}.",
+        "In fact, the tangent line approximation {eq}\Delta f \\approx f'(x) \Delta x{/eq} is a special case of the tangent plane approximation {eq}\Delta f \\approx \nabla f(x,y,z) \cdot \langle \Delta x, \Delta y, \Delta z \rangle{/eq}.",
+        "The tangent plane approximation is given by {eq}\Delta f \\approx \nabla f(x,y,z) \cdot \langle \Delta x, \Delta y, \Delta z \rangle{/eq}, and it generalizes the tangent line approximation {eq}\Delta f \\approx f'(x) \Delta x{/eq}."
+    ]
+}
