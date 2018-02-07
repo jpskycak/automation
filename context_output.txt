@@ -1,2 +1,2 @@
-!!!Tangent lines
-The tangent line to a curve at a point is the line which passes through that point with the same slope as the function at that point. Using the function's derivative, we can find the slope of the tangent line.
+!!!Tangent planes
+If one assigns the variable coefficients in an equation for a plane as components in a vector, that vector will be perpendicular to the plane. Moreover it is called the plane's standard normal vector. Also, ince the gradient of a function is always perpendicular to its level curve, the gradient is always perpendicular to its tangent plane.
