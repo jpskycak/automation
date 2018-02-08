@@ -1,3 +1,2 @@
-!!!Linear approximation
-The tangent plane is used for approximating multivariable functions, just like the tangent line is used for approximating single-variable functions. For the tangent plane, we have {eq}\Delta f \approx 
-abla f(x,y,z) \cdot \langle \Delta x, \Delta y, \Delta z angle{/eq}, which can be rememberd by its similarity to the tangent line approximation, {eq}\Delta f \approx f'(x) \Delta x{/eq}.
+!!!L'Hopital's rule
+When a limit is indeterminate because it goes to 0 divided by 0 or infinity divided by infinity, L'Hopital's rule can be used. According to L'Hopital's rule, the limit remains unchanged if we independently differentiate the numerator and denominator of the limit argument, provided the limit has indeterminate form of 0 divided by 0 or infinity divided by infinity. This is useful because differentiating the numerator and denominator often simplifies the limit and allows us to get a real number answer via substitution.

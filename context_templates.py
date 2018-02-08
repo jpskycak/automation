@@ -459,10 +459,65 @@ linear_approximation_switches = {
         "The tangent line and tangent plane are used for approximating single-variable and multivariable functions, respectively."
     ],
     "part2": [
-        "Instead of {eq}\Delta f \\approx f'(x) \Delta x{/eq}, we have {eq}\Delta f \\approx \nabla f(x,y,z) \cdot \langle \Delta x, \Delta y, \Delta z \rangle{/eq}.",
-        "For the tangent plane, we have {eq}\Delta f \\approx \nabla f(x,y,z) \cdot \langle \Delta x, \Delta y, \Delta z \rangle{/eq}, which can be remembered by its similarity to the tangent line approximation, {eq}\Delta f \\approx f'(x) \Delta x{/eq}.",
-        "The tangent plane approximation is {eq}\Delta f \\approx \nabla f(x,y,z) \cdot \langle \Delta x, \Delta y, \Delta z \rangle{/eq}, and it is an extension of the tangent line approximation {eq}\Delta f \\approx f'(x) \Delta x{/eq}.",
-        "In fact, the tangent line approximation {eq}\Delta f \\approx f'(x) \Delta x{/eq} is a special case of the tangent plane approximation {eq}\Delta f \\approx \nabla f(x,y,z) \cdot \langle \Delta x, \Delta y, \Delta z \rangle{/eq}.",
-        "The tangent plane approximation is given by {eq}\Delta f \\approx \nabla f(x,y,z) \cdot \langle \Delta x, \Delta y, \Delta z \rangle{/eq}, and it generalizes the tangent line approximation {eq}\Delta f \\approx f'(x) \Delta x{/eq}."
+        "Instead of {eq}\Delta f \\approx f'(x) \Delta x{/eq}, we have {eq}\Delta f \\approx \\nabla f(x,y,z) \cdot \langle \Delta x, \Delta y, \Delta z \\rangle{/eq}.",
+        "For the tangent plane, we have {eq}\Delta f \\approx \\nabla f(x,y,z) \cdot \langle \Delta x, \Delta y, \Delta z \\rangle{/eq}, which can be remembered by its similarity to the tangent line approximation, {eq}\Delta f \\approx f'(x) \Delta x{/eq}.",
+        "The tangent plane approximation is {eq}\Delta f \\approx \\nabla f(x,y,z) \cdot \langle \Delta x, \Delta y, \Delta z \\rangle{/eq}, and it is an extension of the tangent line approximation {eq}\Delta f \\approx f'(x) \Delta x{/eq}.",
+        "In fact, the tangent line approximation {eq}\Delta f \\approx f'(x) \Delta x{/eq} is a special case of the tangent plane approximation {eq}\Delta f \\approx \\nabla f(x,y,z) \cdot \langle \Delta x, \Delta y, \Delta z \\rangle{/eq}.",
+        "The tangent plane approximation is given by {eq}\Delta f \\approx \\nabla f(x,y,z) \cdot \langle \Delta x, \Delta y, \Delta z \\rangle{/eq}, and it generalizes the tangent line approximation {eq}\Delta f \\approx f'(x) \Delta x{/eq}."
+    ]
+}
+
+##################
+### ARC LENGTH ###
+##################
+
+arc_length_template = ["{part1} {part2} {part3}"]
+arc_length_switches = {
+    "part1": [
+        "The formula for arc length differential can be found using the Pythagorean Theorem: {eq}ds = \sqrt{ dx^2 + dy^2 }{/eq}.",
+        "Using the Pythagorean Theorem on differentials yields the arc length formula {eq}ds = \sqrt{ dx^2 + dy^2 }{/eq}.",
+        "The arc length formula is {eq}ds = \sqrt{ dx^2 + dy^2 }{/eq} and can be seen as the Pythagoran Theorem applied to differentials",
+        "The arc length formula, {eq}ds = \sqrt{ dx^2 + dy^2 }{/eq}, comes from the Pythagorean Theorem."
+    ],
+    "part2": [
+        "To express the arc length differential in terms {eq}dx{/eq}, then, we can multiply by\n {eq}1 = \\frac{dx}{dx} = \\frac{dx}{\sqrt{dx^2} }{/eq} and then simplify: \n{eq}ds = \sqrt{ \\frac{dx^2}{dx^2} + \\frac{dy^2}{dx^2} }dx = \sqrt{ 1 + (\\frac{dy}{dx})^2 }dx{/eq}\n",
+        "The arc length differential can also be expressed as\n {eq}ds = \sqrt{ \\frac{dx^2}{dx^2} + \\frac{dy^2}{dx^2} }dx = \sqrt{ 1 + (\\frac{dy}{dx})^2 }dx{/eq}\n",
+        "When integrating, we usually use\n{eq}ds = \sqrt{ \\frac{dx^2}{dx^2} + \\frac{dy^2}{dx^2} }dx = \sqrt{ 1 + (\\frac{dy}{dx})^2 }dx{/eq}\n"
+    ],
+    "part3": [
+        "We can also do this with differentials other than {eq}dx{/eq} -- for example, for parametrized functions, we have\n{eq}ds = \sqrt{ (\\frac{ds}{dt})^2 + (\\frac{dy}{dt})^2 }dt{/eq}.",
+        "Likewise, for parametrized functions, we use\n{eq}ds = \sqrt{ (\\frac{ds}{dt})^2 + (\\frac{dy}{dt})^2 }dt{/eq}.",
+        "For parametrized functions, the formula \n{eq}ds = \sqrt{ (\\frac{ds}{dt})^2 + (\\frac{dy}{dt})^2 }dt{/eq}\n is derived in a similar fashion."
+    ]
+}
+
+###################################
+### AVERAGE VALUE OF A FUNCTION ###
+###################################
+
+average_value_of_a_function_template = ["{part1} {part2} {part3}"]
+average_value_of_a_function_switches = {
+    "part1": [
+        "In one dimension, the formula for average value of a function is given by {eq}\\frac{\int f(x) dx}{\int dx}{/eq}.",
+        "The average value of a single-variable function is given by {eq}\\frac{\int f(x) dx}{\int dx}{/eq}.",
+        "To find the average value of a single-variable function over an interval, one needs to sum the function and divide by the length of the integral: {eq}\\frac{\int f(x) dx}{\int dx}{/eq}.",
+        "The average value of a single-variable function over an interval is computed by dividing the sum the function by the length of the interval: {eq}\\frac{\int f(x) dx}{\int dx}{/eq}.",
+        "The average value of a single-variable function over an interval is computed as {eq}\\frac{\int f(x) dx}{\int dx}{/eq}, the sum dividing of the function divided by the length of the interval."
+    ],
+    "part2": [
+        "In two dimensions, the average value of a function is given by {eq}\\frac{\int f(x,y) dxdy}{\int dxdy}{/eq}.",
+        "The average value of a two-variable function is given by {eq}\\frac{\int f(x,y) dxdy}{\int dxdy}{/eq}.",
+        "The average value of a function of two variables is given by {eq}\\frac{\int f(x,y) dxdy}{\int dxdy}{/eq}.",
+        "To find the average value of a two-variable function over an area, one needs to sum the function and divide by the total area: {eq}\\frac{\int f(x,y) dxdy}{\int dxdy}{/eq}.",
+        "The average value of a two-variable function over an area is computed by dividing the sum the function by the total area: {eq}\\frac{\int f(x,y) dxdy}{\int dxdy}{/eq}.",
+        "The average value of a two-variable function over an interval is computed as {eq}\\frac{\int f(x,y) dxdy}{\int dxdy}{/eq}, the sum dividing of the function divided by the total area."
+    ],
+    "part3": [
+        "In general, in ''n'' dimensions, the average value of a function is given by {eq}\\frac{\int f(x_1, ..., x_n) dx_1...dx_n}{\int dx_1...dx_n}{/eq}.",
+        "The average value of an ''n''-variable function is given by {eq}\\frac{\int f(x_1, ..., x_n) dx_1...dx_n}{\int dx_1...dx_n}{/eq}.",
+        "The average value of a function of ''n'' variables is given by {eq}\\frac{\int f(x_1, ..., x_n) dx_1...dx_n}{\int dx_1...dx_n}{/eq}.",
+        "To find the average value of an ''n''-variable function over a volume, one needs to sum the function and divide by the total  volume: {eq}\\frac{\int f(x_1, ..., x_n) dx_1...dx_n}{\int dx_1...dx_n}{/eq}.",
+        "The average value of an ''n''-variable function over an interval is computed by dividing the sum the function by the total volume: {eq}\\frac{\int f(x_1, ..., x_n) dx_1...dx_n}{\int dx_1...dx_n}{/eq}.",
+        "The average value of an ''n''-variable function over an interval is computed as {eq}\\frac{\int f(x_1, ..., x_n) dx_1...dx_n}{\int dx_1...dx_n}{/eq}., the sum dividing of the function divided by the total volume."
     ]
 }
