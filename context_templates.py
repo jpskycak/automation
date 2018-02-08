@@ -521,3 +521,29 @@ average_value_of_a_function_switches = {
         "The average value of an ''n''-variable function over an interval is computed as {eq}\\frac{\int f(x_1, ..., x_n) dx_1...dx_n}{\int dx_1...dx_n}{/eq}., the sum dividing of the function divided by the total volume."
     ]
 }
+
+######################
+### TRIPLE PRODUCT ###
+######################
+
+triple_product_template = ["{part1} {part2} {part3}"]
+triple_product_switches = {
+    "part1": [
+        "Given three edges of a parallelepiped, we can use the triple product formula to find the volume of the parallelepiped.",
+        "The triple product formula can be used to find the volume of a parallelepiped, given its three edges.",
+        "The volume of a parallelepiped can be found by applying the triple product formula to three of its edges."
+    ],
+    "part2": [
+        "If the edge vectors are {eq}a,b,c{/eq}, then formula is given by {eq}(a \\times b) \cdot c{/eq}.",
+        "If the edge vectors are {eq}u,v,w{/eq}, then formula is given by {eq}(u \\times v) \cdot w{/eq}.",
+        "If the edge vectors are {eq}A,B,C{/eq}, then formula is given by {eq}(A \\times B) \cdot C{/eq}.",
+        "The formula is given by {eq}(a \\times b) \cdot c{/eq}, where {eq}a,b,c{/eq} are the edge vectors.",
+        "The formula is given by {eq}(u \\times v) \cdot w{/eq}, where {eq}u,v,w{/eq} are the edge vectors.",
+        "The formula is given by {eq}(A \\times B) \cdot C{/eq}, where {eq}A,B,C{/eq} are the edge vectors."
+    ],
+    "part3": [
+        "The formula works because the cross product gives a vector which is perpendicular to the base and has magnitude equal to the area of the base. Taking the dot product after the cross product, then, is equivalent to multiplying the area of the base by the height.",
+        "To understand the formula, one can recall that the cross product gives a vector which is perpendicular to the base and whose length is the area of the base, so taking the dot product after the cross product multiplies the area of the base by the height.",
+        "To intuit the formula, remember that the cross product gives a vector whose magnitude is equal to the area of the base and which is perpendicular to the base. The dot product, then, multiplies the area of the base by the height."
+    ]
+}
