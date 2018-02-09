@@ -547,3 +547,91 @@ triple_product_switches = {
         "To intuit the formula, remember that the cross product gives a vector whose magnitude is equal to the area of the base and which is perpendicular to the base. The dot product, then, multiplies the area of the base by the height."
     ]
 }
+
+#########################
+### INFLECTION POINTS ###
+#########################
+
+inflection_points_template = ["{part1} {part2} {part3}"]
+inflection_points_switches = {
+    "part1": [
+        "An inflection point of a function is a point where the function changes concavity.",
+        "A point where a function changes concavity is called an inflection point.",
+        "If a function changes concavity at a point, then that point is called an inflection point.",
+        "An inflection point of a function is a point where the function changes from concave down to concave up or from concave up to concave down.",
+        "A point where a function changes from concave down to concave up or from concave up to concave down is called an inflection point.",
+        "If a function changes concavity at a point, then that point is called an inflection point."
+    ],
+    "part2": [
+        "Candidates for inflection points can be found by taking the second derivative of the function and setting it equal to zero. We also include those points where the second derivative is undefined.",
+        "By setting the second derivative equal to zero, we can find candidates to inflection points. We also need to include those points where the second derivative is undefined.",
+        "Just like we can find candidates for maxima and minima by setting the first derivative to zero, we can find candidates to inflection points by setting the second derivative to zero. We also include those points which make second derivative undefined.",
+        "We can find candidates to inflection points by setting the second derivative to zero, just like we can find candidates for maxima and minima by setting the first derivative to zero. We also need to include those points which make second derivative undefined."
+    ],
+    "part3": [
+        "However, one must check each of the candidates to make sure it is indeed an inflection point -- the function could, but does not necessarily, change concavity at these points.",
+        "That being said, the function does not necessarily change concavity at these points, so we need to test them to be sure.",
+        "However, just like points which make the first derivative zero could be saddle points and not optima, points which make the second derivative zero might not actually be inflection points. Therefore, we need to check each candidate to be sure.",
+        "However, we need to test each candidate to be sure that it is an inflection point. Just like points which make the first derivative zero are not necessarily optima because they could be saddle points, points which make the second derivative zero are not necessarily inflection points."
+    ]
+}
+
+###############
+
+import random
+import nltk.data
+#nltk.download('punkt')
+tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
+
+
+def make_contexts():
+    
+    contexts={}
+    contexts['!!!Cross product'] = {'template': cross_product_template, 'switches': cross_product_switches}
+    contexts['!!!Line integrals'] = {'template': line_integrals_template, 'switches': line_integrals_switches}
+    contexts['!!!Lagrange multipliers'] = {'template': lagrange_multipliers_template, 'switches': lagrange_multipliers_switches}
+    contexts['!!!Separable Differential Equations'] = {'template': separable_differential_equations_template, 'switches': separable_differential_equations_switches}
+    contexts['!!!Dot product'] = {'template': dot_product_template, 'switches': dot_product_switches}
+
+    contexts['!!!Initial Condition Problems'] = {'template': initial_condition_problems_template, 'switches': initial_condition_problems_switches}
+    contexts['!!!Equation of a Sphere'] = {'template': equation_of_a_sphere_template, 'switches': equation_of_a_sphere_switches}
+    contexts['!!!Directional Derivatives'] = {'template': directional_derivatives_template, 'switches': directional_derivatives_switches}
+    contexts['!!!Indefinite Integrals'] = {'template': indefinite_integrals_template, 'switches': indefinite_integrals_switches}
+    contexts['!!!Tangent Lines'] = {'template': tangent_lines_template, 'switches': tangent_lines_switches}
+
+    contexts['!!!Derivative as Rate of Change'] = {'template': derivative_as_rate_of_change_template, 'switches': derivative_as_rate_of_change_switches}
+    contexts['!!!Tangent Planes'] = {'template': tangent_planes_template, 'switches': tangent_planes_switches}
+    contexts["!!!L'Hopital's Rule"] = {'template': lhopitals_rule_template, 'switches': lhopitals_rule_switches}
+    contexts["!!!Hooke's Law"] = {'template': hookes_law_template, 'switches': hookes_law_switches}
+    contexts["!!!Kinematics"] = {'template': kinematics_template, 'switches': kinematics_switches}
+
+    contexts["!!!Linear Approximation"] = {'template': linear_approximation_template, 'switches': linear_approximation_switches}
+    contexts["!!!Arc Length"] = {'template': arc_length_template, 'switches': arc_length_switches}
+    contexts["!!!Average Value of a Function"] = {'template': average_value_of_a_function_template, 'switches': average_value_of_a_function_switches}
+    contexts["!!!Triple Product"] = {'template': triple_product_template, 'switches': triple_product_switches}
+    contexts["!!!Inflection Points"] = {'template': inflection_points_template, 'switches': inflection_points_switches}
+
+    
+    return contexts
+
+def make_random_context(lookup="!!!Dot Product"):
+    
+    contexts = make_contexts()
+
+    template = contexts[lookup]['template']
+    switches = contexts[lookup]['switches']
+    switches_instance = {k:random.choice(v) for k,v in switches.iteritems()}
+    template_instance = random.choice(template).format(**switches_instance)
+
+    template_instance = template_instance.replace('  ',' ')
+
+    if lookup=="!!!Cross product":
+        sentences = tokenizer.tokenize(template_instance)
+        sentences = [sent.capitalize() for sent in sentences]
+        template_instance = ' '.join(sentences)
+
+    print lookup+'\n'+template_instance
+    
+def print_lookups():
+    contexts = make_contexts()
+    print contexts.keys()
