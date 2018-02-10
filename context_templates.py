@@ -719,11 +719,67 @@ the_fundamental_theorem_of_calculus_switches = {
     ]
 }
 
-!!!Evaluating Limits via Direct Substitution
-When possible, simplest way to evaluate a limit of the function is to simply plug the limit directly into the function. This technique is called the method of direct substitution, and works whenever the function is continuous. Sometimes, even though direct substitution may not be possible initially, it is possible to simplify the argument of the limit so that it is possible.
+#################################################
+### EVALUATING LIMITS VIA DIRECT SUBSTITUTION ###
+#################################################
 
-!!!Acceleration, Velocity, and Position
-When working with acceleration, velocity, and position, it is vital to know that velocity is the derivative of position, and acceleration is the derivative of velocity. Thus, one can find velocity by integrating acceleration, and one can find position by integrating velocity.
+evaluating_limits_via_direct_substitition_template = ["{part1} {part2}"]
+evaluating_limits_via_direct_substitition_switches = {
+    "part1": [
+        "When possible, simplest way to evaluate a limit of the function is to simply plug the limit directly into the function. This technique is called the method of direct substitution, and works whenever the function is continuous."
+    ],
+    "part2": [
+        "Sometimes, even though direct substitution may not be possible initially, it is possible to simplify the argument of the limit so that it is possible."
+    ]
+}
+
+############################################
+### ACCELERATION, VELOCITY, AND POSITION ###
+############################################
+
+acceleration_velocity_position_template = ["{part1} {part2}"]
+acceleration_velocity_position_switches = {
+    "part1": [
+        "When working with acceleration, velocity, and position, it is vital to know that velocity is the derivative of position, and acceleration is the derivative of velocity."
+    ],
+    "part2": [
+        "Thus, one can find velocity by integrating acceleration, and one can find position by integrating velocity."
+    ]
+}
+
+#################################
+### CHARACTERISTIC POLYNOMIAL ###
+#################################
+
+characteristic_polynomial_template = ["{part1} {part2} {part3}"]
+characteristic_polynomial_switches = {
+    "part1": [
+        "For a differential equation {eq}ay' ' + by' + cy = 0{/eq}, the characteristic polynomial is given by {eq}ar^2 + br + c = 0{/eq}."
+    ],
+    "part2": [
+        "If the roots {eq}r_1, r_2{/eq} of the polynomial are distinct, the solutions are given by the real and imaginary parts of {eq}c_1e^{r_1x} + c_2e^{r_2x}{/eq}."
+    ],
+    "part3": [
+        "If the roots {eq}r_1=r_2 = r{/eq} are repeated, then the solutions are given by the real and imaginary parts of {eq}c_1e^{rx} + c_2xe^{rx}{/eq}."
+    ]
+}
+
+##############################################
+### DERIVATIVE OF THE EXPONENTIAL FUNCTION ###
+##############################################
+
+derivative_of_exponential_template = ["{part1} {part2} {part3}"]
+derivative_of_exponential_switches = {
+    "part1": [
+        "The exponential function is given by {eq}e^x{/eq}, where {eq}e \\approx 2.71{/eq} is Euler's constant. It is the function with the special property that its derivative is itself."
+    ],
+    "part2": [
+        "That is to say, if {eq}f(x) = e^x{/eq}, then {eq}f'(x) = e^x{/eq}, and thus {eq}f^{(n)}(x) = e^x{/eq} for every ''n''th derivative."
+    ],
+    "part3": [
+        "We sometimes also encounter exponential functions of the form {eq}e^{rx}{/eq} for a constant {eq}r{/eq}. If {eq}f(x) = e^{rx}{/eq}, then by the chain rule we have {eq}f'(x) = re^{rx}{/eq}, and thus {eq}f^{(n)}(x) = r^ne^{rx}{/eq} for every ''n''th derivative."
+    ]
+}
 
 
 
@@ -738,6 +794,8 @@ tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 def make_contexts():
     
     contexts={}
+    
+    # randomized
     contexts['!!!Cross Product'] = {'template': cross_product_template, 'switches': cross_product_switches}
     contexts['!!!Line Integrals'] = {'template': line_integrals_template, 'switches': line_integrals_switches}
     contexts['!!!Lagrange Multipliers'] = {'template': lagrange_multipliers_template, 'switches': lagrange_multipliers_switches}
@@ -766,12 +824,18 @@ def make_contexts():
     contexts["!!!Optimizing via Critical Points"] = {'template': critical_points_template, 'switches': critical_points_switches}
     
     
-    
+    # not randomized
     contexts["!!!Approximating Integrals"] = {'template': approximating_integrals_template, 'switches': approximating_integrals_switches}
     contexts["!!!Quotient Rule"] = {'template': quotient_rule_template, 'switches': quotient_rule_switches}
     contexts["!!!Product Rule"] = {'template': product_rule_template, 'switches': product_rule_switches}
     contexts["!!!Polar Coordinates"] = {'template': polar_coordinates_template, 'switches': polar_coordinates_switches}
     contexts["!!!The Fundamental Theorem of Calculus"] = {'template': the_fundamental_theorem_of_calculus_template, 'switches': the_fundamental_theorem_of_calculus_switches}
+    contexts["!!!Evaluating Limits via Direct Substitution"] = {'template': evaluating_limits_via_direct_substitition_template, 'switches': evaluating_limits_via_direct_substitition_switches}
+    contexts["!!!Acceleration, Velocity, and Position"] = {'template': acceleration_velocity_position_template, 'switches': acceleration_velocity_position_switches}
+    contexts["!!!The Characteristic Polynomial"] = {'template': characteristic_polynomial_template, 'switches': characteristic_polynomial_switches}
+    contexts["!!!Derivative of the Exponential Function"] = {'template': derivative_of_exponential_template, 'switches': derivative_of_exponential_switches}
+
+
 
     
     return contexts
