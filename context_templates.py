@@ -335,7 +335,7 @@ tangent_lines_switches = {
 ### DERIVATIVE AS RATE OF CHANGE ###
 ####################################
 
-derivative_as_rate_of_change_template = ["{part1} {part2}"]
+derivative_as_rate_of_change_template = ["{part1} {part2} {part3}"]
 derivative_as_rate_of_change_switches = {
     "part1": [
         "The derivative of a function can be interpreted as the rate of change of a function per unit of input.",
@@ -345,9 +345,14 @@ derivative_as_rate_of_change_switches = {
         "A function's derivative tells how the function changes in response to an increase in one unit input."
     ],
     "part2": [
+        "Since the derivative is itself a function, the rate of change may depend upon the function variables as well.",
+        "The rate of change may depend upon the function variables, since the derivative is itself a function.",
+        "The derivative is a function itself, so the rate of change may depend upon the function variables as well."
+    ],
+    "part2": [
         "Thus, if we want to find the rate of change of some quantity, and we can describe that quantity as a function, we don't need to do any experiments to find the rate of change.",
         "Thus, it is not necessary to do any more experiments to find rate of change if we know how to express the quantity in question as a function -- we can work it all out on paper.",
-        "Consequently, if we can express some quantity as a function, we can work out its rate of change on paper without having to do any more experiments."
+        "Consequently, if we can express some quantity as a function, we can work out its rate of change on paper without having to do any experiments."
     ]
 }
 
@@ -576,6 +581,64 @@ inflection_points_switches = {
     ]
 }
 
+######################
+### PATH INTEGRALS ###
+######################
+
+path_integrals_template = ['{part1} {part2} {part3}']
+path_integrals_switches = {
+    'part1': [
+        'Path integrals are integrals computed over one-dimensional curves that may be embedded in higher-dimensional space.',
+        'Path integrals are one-dimensional integrals over curves that may be traced out in higher-dimensional space.'
+    ],
+    'part2': [
+        'Along the path, it is easiest to parameterize the variables and write all of the variables and differentials in terms of the parameter.',
+        'Along the path, then, it is possible to write the equation of the line in terms of a parameter and express the integrals in terms of that parameter.',
+        'One can write the variables in terms of a parameter along the path, and take differentials in terms of the parameter too.',
+        'The path can be expressed as a curve with a single parameter, so the integrals can written in terms of that parameter.'
+    ],
+    'part3': [
+        'This way, the entire integral may be written in terms of the parameter, causing it to simplify to a single-variable integral.',
+        'Writing everything in terms of the parameter will simplify the integral into a single-variable integral.',
+        'The path integral can be transformed into a single-variable integral by expressing all of the terms with the same parameter.',
+        'Then, the entire integral can be simplified into a single-variable integral by writing everything in terms of the parameter.',
+        'Writing everything in terms of a single parameter, the path integral can be simplified into a single-variable integral.'
+    ]
+}
+
+#######################
+### CRITICAL POINTS ###
+#######################
+
+critical_points_template = ["{part1} {part2} {part3} {part4}"]
+critical_points_switches = {
+    "part1": [
+        "At the maximum or minimum of a differentiable function, the derivative must be zero or undefined. Candidates for the maximum or minimum, i.e. those points which make the derivative zero or undefined, are called critical points.",
+        "Candidates for the maximum or minimum of a function are called critical points. These are the points which make the derivative zero or undefined.",
+        "The derivative must be zero or undefined at the maximum or minimum of a differentiable function. Therefore, we can find candidates for the maximum or minimum of a function by solving for those points which make the derivative zero or undefined. These points are called critical points.",
+        "Critical points are those which make a function's derivative zero or undefined. Since the derivative must be zero or undefined at the maximum or minimum of a differentiable function, critical points are candidates for the maximum or minimum.",
+        "Critical points are candidates for the maximum or minimum or minimum of a function. They are the points which make the derivative zero or undefined."
+    ],
+    "part2": [
+        "However, critical points do not necessarily correspond to global optima of the function. A function may have many local optima, some of which may be more optimal than others.",
+        "However, a function may have many local optima, some of which may be more optimal than others. Therefore, critical points do not necessarily correspond to global optima of the function.",
+        "That being said, critical points do not necessarily correspond to global optima of the function, because some local optima my be more optimal than others.",
+        "That being said, some local optima my be more optimal than others, so critical points do not necessarily correspond to global optima of the function."
+    ],
+    "part3": [
+        "Furthermore, critical points need not even correspond to local optima of the function. They may represent saddle points, points where the function momentarily stops increasing or decreasing but then keeps on going in the same direction that it was originally going.",
+        "But critical points need not even correspond to local optima of the function -- they may represent saddle points where the function momentarily stops increasing or decreasing but then continues in the same direction.",
+        "Critical points need not even correspond to local optima of the function, though. For example, the derivative is also zero at saddle points, where the function momentarily stops increasing or decreasing but then continues in the same direction."
+    ],
+    "part4": [
+    "Thus, to find the optima of a function, we need to evaluate the function at each of the critical points and then compare the resulting values.",
+    "Thus, we must evaluate the function at each of the critical points and then compare the resulting values in order to find the optima of the function.",
+    "Thus, optimizing a function requires us to evaluate the function at each of the critical points and then compare the resulting values."
+    ]
+}
+
+
+
 ###############
 
 import random
@@ -587,11 +650,11 @@ tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 def make_contexts():
     
     contexts={}
-    contexts['!!!Cross product'] = {'template': cross_product_template, 'switches': cross_product_switches}
-    contexts['!!!Line integrals'] = {'template': line_integrals_template, 'switches': line_integrals_switches}
-    contexts['!!!Lagrange multipliers'] = {'template': lagrange_multipliers_template, 'switches': lagrange_multipliers_switches}
+    contexts['!!!Cross Product'] = {'template': cross_product_template, 'switches': cross_product_switches}
+    contexts['!!!Line Integrals'] = {'template': line_integrals_template, 'switches': line_integrals_switches}
+    contexts['!!!Lagrange Multipliers'] = {'template': lagrange_multipliers_template, 'switches': lagrange_multipliers_switches}
     contexts['!!!Separable Differential Equations'] = {'template': separable_differential_equations_template, 'switches': separable_differential_equations_switches}
-    contexts['!!!Dot product'] = {'template': dot_product_template, 'switches': dot_product_switches}
+    contexts['!!!Dot Product'] = {'template': dot_product_template, 'switches': dot_product_switches}
 
     contexts['!!!Initial Condition Problems'] = {'template': initial_condition_problems_template, 'switches': initial_condition_problems_switches}
     contexts['!!!Equation of a Sphere'] = {'template': equation_of_a_sphere_template, 'switches': equation_of_a_sphere_switches}
@@ -610,6 +673,9 @@ def make_contexts():
     contexts["!!!Average Value of a Function"] = {'template': average_value_of_a_function_template, 'switches': average_value_of_a_function_switches}
     contexts["!!!Triple Product"] = {'template': triple_product_template, 'switches': triple_product_switches}
     contexts["!!!Inflection Points"] = {'template': inflection_points_template, 'switches': inflection_points_switches}
+    
+    contexts["!!!Path Integrals"] = {'template': path_integrals_template, 'switches': path_integrals_switches}
+    contexts["!!!Optimizing via Critical Points"] = {'template': critical_points_template, 'switches': critical_points_switches}
 
     
     return contexts
