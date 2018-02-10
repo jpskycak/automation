@@ -637,6 +637,94 @@ critical_points_switches = {
     ]
 }
 
+###############################
+### APPROXIMATING INTEGRALS ###
+###############################
+
+approximating_integrals_template = ["{part1} {part2} {part3}"]
+approximating_integrals_switches = {
+    "part1": [
+        "Integrals can be numerically computed by partitioning the domain of integration into smaller pieces, evaluating the integrand somewhere on each of those pieces, and then adding each piece's contribution to the integral."
+    ],
+    "part2": [
+        "The most basic estimation methods include left and right Riemann sums, which involve computing the integral as the sum of areas of equal-width rectangles whose height to the left or right corner is given by the function value."
+    ],
+    "part3": [
+        "More advanced estimation methods include midpoint approximation, were the height midway between the left and right corners is given by the function value, and trapezoidal approximation, which takes an average of the left and right Riemann sums, and trapezoidal approximation."
+    ]
+}
+
+#####################
+### QUOTIENT RULE ###
+#####################
+
+quotient_rule_template = ["{part1} {part2} {part3}"]
+quotient_rule_switches = {
+    "part1": [
+        "The quotient rule can be used to find derivatives of rational functions."
+    ],
+    "part2": [
+        "It is given by: {eq}\left( \\frac{f(x)}{g(x)} \\right)' = \\frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}{/eq}."
+    ],
+    "part3": [
+        "However, when it is possible to simplify a function, that should be done in favor of using the quotient rule because it is faster to simplify."
+    ]
+}
+
+####################
+### PRODUCT RULE ###
+####################
+
+product_rule_template = ["{part1} {part2} {part3}"]
+product_rule_switches = {
+    "part1": [
+        "The product rule is used for taking the derivative of the product of two functions."
+    ],
+    "part2": [
+        "According to the product rule, the derivative of the product {eq}f(t)g(t){/eq} is given by {eq}f'(t)g(t) + f(t)g'(t){/eq}."
+    ],
+    "part3": [
+        "The product rule also works with the dot product for vector functions."
+    ]
+}
+
+#########################
+### POLAR COORDINATES ###
+#########################
+
+polar_coordinates_template = ["{part1} {part2} {part3}"]
+polar_coordinates_switches = {
+    "part1": [
+        "Polar coordinates can be used to exploit circular symmetry, while Cartesian coordinates can be used to exploit rectangular symmetry."
+    ],
+    "part2": [
+        "Converting from Cartesian coordinates to polar coordinates is accomplished by assigning {eq}r = \\sqrt{x^2 + y^2}{/eq} and {eq}\\theta = \\arctan \\frac{y}{x}{/eq}."
+    ],
+    "part3": [
+        "Conversely, converting from polar coordinates to cartesian coordinates is accomplished through {eq}x=r\cos \\theta{/eq} and {eq}y = r\\sin \\theta{/eq}."
+    ]
+}
+
+###########################################
+### THE FUNDAMENTAL THEOREM OF CALCULUS ###
+###########################################
+
+the_fundamental_theorem_of_calculus_template = ["{part1} {part2}"]
+the_fundamental_theorem_of_calculus_switches = {
+    "part1": [
+        "Part 1 of the Fundamental Theorem of Calculus states that for an integral function {eq}F(x) = \int_{x_0}^x f(t)dt{/eq}, the derivative is given by {eq}F'(x) = f(x){/eq}."
+    ],
+    "part2": [
+        "Intuitively, {eq}F(x){/eq} measures the amount of area of {eq}f(t){/eq} from {eq}t=x_0{/eq} to {eq}t=x{/eq}, and the amount of change at {eq}t=x{/eq} is the amount of area introduced at {eq}t=x{/eq}, which is given by {eq}f(x){/eq}."
+    ]
+}
+
+!!!Evaluating Limits via Direct Substitution
+When possible, simplest way to evaluate a limit of the function is to simply plug the limit directly into the function. This technique is called the method of direct substitution, and works whenever the function is continuous. Sometimes, even though direct substitution may not be possible initially, it is possible to simplify the argument of the limit so that it is possible.
+
+!!!Acceleration, Velocity, and Position
+When working with acceleration, velocity, and position, it is vital to know that velocity is the derivative of position, and acceleration is the derivative of velocity. Thus, one can find velocity by integrating acceleration, and one can find position by integrating velocity.
+
 
 
 ###############
@@ -676,6 +764,14 @@ def make_contexts():
     
     contexts["!!!Path Integrals"] = {'template': path_integrals_template, 'switches': path_integrals_switches}
     contexts["!!!Optimizing via Critical Points"] = {'template': critical_points_template, 'switches': critical_points_switches}
+    
+    
+    
+    contexts["!!!Approximating Integrals"] = {'template': approximating_integrals_template, 'switches': approximating_integrals_switches}
+    contexts["!!!Quotient Rule"] = {'template': quotient_rule_template, 'switches': quotient_rule_switches}
+    contexts["!!!Product Rule"] = {'template': product_rule_template, 'switches': product_rule_switches}
+    contexts["!!!Polar Coordinates"] = {'template': polar_coordinates_template, 'switches': polar_coordinates_switches}
+    contexts["!!!The Fundamental Theorem of Calculus"] = {'template': the_fundamental_theorem_of_calculus_template, 'switches': the_fundamental_theorem_of_calculus_switches}
 
     
     return contexts
