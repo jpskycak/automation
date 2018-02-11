@@ -644,13 +644,23 @@ critical_points_switches = {
 approximating_integrals_template = ["{part1} {part2} {part3}"]
 approximating_integrals_switches = {
     "part1": [
-        "Integrals can be numerically computed by partitioning the domain of integration into smaller pieces, evaluating the integrand somewhere on each of those pieces, and then adding each piece's contribution to the integral."
+        "Integrals can be numerically computed by partitioning the domain of integration into smaller pieces, evaluating the integrand somewhere on each of those pieces, and then adding each piece's contribution to the integral.",
+        "Integrals can be numerically approximated by splitting the domain of integration into smaller pieces, evaluating the integrand somewhere on each of those pieces, and then summing each piece's contribution to the integral.",
+        "To approximate an integral, we can split the domain of integration into smaller pieces and sum up the area or volume over all of those pieces.",
+        "To numerically commpute an integral, we can split the domain of integration into smaller pieces and sum up the area or volume over all of those pieces.",
+        "To numerically commpute an integral, we can partition the domain of integration into smaller pieces and add up the area or volume over all of those pieces.",
+        "Integrals can be approximating by partitioning them into smaller pieces, calculating the area or volume for each piece, and adding up the area or volume of all of the pieces."
     ],
     "part2": [
-        "The most basic estimation methods include left and right Riemann sums, which involve computing the integral as the sum of areas of equal-width rectangles whose height to the left or right corner is given by the function value."
+        "The most basic estimation methods include left and right Riemann sums, which involve computing the integral as the sum of areas of equal-width rectangles whose height to the left or right corner is given by the function value.",
+        "The most basic estimation methods include left and right Riemann sums, which split the integral into rectangles of equal width, each of whose height to the the left or right corner is given by the function value.",
+        "Riemann sums, for example, involve computing the integral as the sum of areas of equal-width rectangles whose height to the left or right corner is given by the function value.",
+        "Riemann sums, for example, involve splitting the integral into rectangles of equal width, each of whose height to the the left or right corner is given by the function value."
     ],
     "part3": [
-        "More advanced estimation methods include midpoint approximation, were the height midway between the left and right corners is given by the function value, and trapezoidal approximation, which takes an average of the left and right Riemann sums, and trapezoidal approximation."
+        "More advanced estimation methods include midpoint approximation, where the height midway between the left and right corners is given by the function value, and trapezoidal approximation, which takes an average of the left and right Riemann sums, and trapezoidal approximation.",
+        "Midpoint approximation is a more advanced method where the height midway between the left and right corners is given by the function value; so is trapezoidal approximation, which takes an average of the left and right Riemann sums, and trapezoidal approximation.",
+        "There are more advanced methods which yield better approximates, such as midpoint and trapezoidal approximation. In midpoint approximation, the height midway between the left and right corners is given by the function value; in trapezoidal approximation, the left and right Riemann sums are averaged."
     ]
 }
 
@@ -658,16 +668,19 @@ approximating_integrals_switches = {
 ### QUOTIENT RULE ###
 #####################
 
-quotient_rule_template = ["{part1} {part2} {part3}"]
+quotient_rule_template = ["{part1} {part2}"]
 quotient_rule_switches = {
     "part1": [
-        "The quotient rule can be used to find derivatives of rational functions."
+        "The quotient rule can be used to find derivatives of rational functions. It is given by: {eq}\left( \\frac{f(x)}{g(x)} \\right)' = \\frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}{/eq}.",
+        "To find derivatives of rational functions, we use the quotient rule, which is given by {eq}\left( \\frac{f(x)}{g(x)} \\right)' = \\frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}{/eq}.",
+        "Find the derivative of a rational function involves the use the quotient rule, which is given by {eq}\left( \\frac{f(x)}{g(x)} \\right)' = \\frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}{/eq}.",
+        "The quotient rule is given by {eq}\left( \\frac{f(x)}{g(x)} \\right)' = \\frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}{/eq}. It is used to find derivatives of rational functions."
     ],
     "part2": [
-        "It is given by: {eq}\left( \\frac{f(x)}{g(x)} \\right)' = \\frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}{/eq}."
-    ],
-    "part3": [
-        "However, when it is possible to simplify a function, that should be done in favor of using the quotient rule because it is faster to simplify."
+        "However, using the product rule can be time-consuming, so one should be sure to simplify a rational expression first, before using the product rule.",
+        "The product rule can be computationally-intensive, so one should be sure to simplify a rational expression as much as possible before using it.",
+        "Before using the product rule, though, one should be sure to simplify a rational expression as much as possible. This will ensure that no unnecessary computations are performed.",
+        "Before using the product rule, one should be sure to simplify a rational expression as much as possible, so as to reduce the amount of time and effort that is expended through the computation."
     ]
 }
 
@@ -675,16 +688,20 @@ quotient_rule_switches = {
 ### PRODUCT RULE ###
 ####################
 
-product_rule_template = ["{part1} {part2} {part3}"]
+product_rule_template = ["{part1} {part2}"]
 product_rule_switches = {
     "part1": [
-        "The product rule is used for taking the derivative of the product of two functions."
+        "The product rule is used for taking the derivative of the product of two functions. According to the product rule, the derivative of the product {eq}f(x)g(x){/eq} is given by {eq}f'(x)g(x) + f(x)g'(x){/eq}.",
+        "To take the derivative of the product of two functions, we use the product rule, which is given by {eq}(f(x)g(x))'= f'(x)g(x) + f(x)g'(x){/eq}.",
+        "The product rule, given by {eq}(f(x)g(x))'= f'(x)g(x) + f(x)g'(x){/eq}, is used to take the derivative of the product of functions.",
+        "When we want to take the derivative of two functions which are multiplied together, we can use the product rule, which is given by {eq}(f(x)g(x))'= f'(x)g(x) + f(x)g'(x){/eq}.",
+        "The product rule is given by {eq}(f(x)g(x))'= f'(x)g(x) + f(x)g'(x){/eq}. It is used when we want to take the derivative of the product of functions, i.e. functions which are multiplied together."
     ],
     "part2": [
-        "According to the product rule, the derivative of the product {eq}f(t)g(t){/eq} is given by {eq}f'(t)g(t) + f(t)g'(t){/eq}."
-    ],
-    "part3": [
-        "The product rule also works with the dot product for vector functions."
+        "For the product of more than two functions, the product rule follows the same format. For example, {eq}(f(x)g(x)h(x))'= f'(x)g(x)h(x) + f(x)g'(x)h(x) + f(x)g(x)h'(x){/eq}. It also works with the dot product for vector functions.",
+        "The product rule also works for products of more than two functions, e.g. {eq}(f(x)g(x)h(x))'= f'(x)g(x)h(x) + f(x)g'(x)h(x) + f(x)g(x)h'(x){/eq}. It also works with the dot product for vector functions.",
+        "In general, for a product of more than two functions, the product rule involves taking the derivative of each function and mutliplying it by the other functions, and then adding up all the terms. For example, {eq}(f(x)g(x)h(x))'= f'(x)g(x)h(x) + f(x)g'(x)h(x) + f(x)g(x)h'(x){/eq}. It also works with the dot product for vector functions.",
+        "For products of more than two functions, the product rule is similar: {eq}(f(x)g(x)h(x))'= f'(x)g(x)h(x) + f(x)g'(x)h(x) + f(x)g(x)h'(x){/eq}. It also works with the dot product for vector functions."
     ]
 }
 
@@ -692,16 +709,23 @@ product_rule_switches = {
 ### POLAR COORDINATES ###
 #########################
 
-polar_coordinates_template = ["{part1} {part2} {part3}"]
+polar_coordinates_template = ["{part1} {part2}"]
 polar_coordinates_switches = {
     "part1": [
-        "Polar coordinates can be used to exploit circular symmetry, while Cartesian coordinates can be used to exploit rectangular symmetry."
+        "Polar coordinates can be used to exploit circular symmetry, while Cartesian coordinates can be used to exploit rectangular symmetry.",
+        "To take advantage of circular symmetry, we use polar coordinates; to take advantage of rectangular symmetry, we use Cartesian coordinates.",
+        "To take advantage of rectangular symmetry, we use Cartesian coordinates; to take advantage of circular symmetry, we use polar coordinates.",
+        "Cartesian coordinates are used to exploit rectangular symmetry, and polar coordinates are used to exploit circular symmetry.",
+        "Cartesian and polar coordinates are used to take advantage of rectangular and circular symmetry, respectively.",
+        "Polar and Cartesian coordinates are used to take advantage of circular and rectangular symmetry, respectively."
     ],
     "part2": [
-        "Converting from Cartesian coordinates to polar coordinates is accomplished by assigning {eq}r = \\sqrt{x^2 + y^2}{/eq} and {eq}\\theta = \\arctan \\frac{y}{x}{/eq}."
-    ],
-    "part3": [
-        "Conversely, converting from polar coordinates to cartesian coordinates is accomplished through {eq}x=r\cos \\theta{/eq} and {eq}y = r\\sin \\theta{/eq}."
+        "Converting from Cartesian coordinates to polar coordinates is accomplished by assigning {eq}r = \\sqrt{x^2 + y^2}{/eq} and {eq}\\theta = \\arctan \\frac{y}{x}{/eq}. Conversely, converting from polar coordinates to Cartesian coordinates is accomplished through {eq}x=r\cos \\theta{/eq} and {eq}y = r\\sin \\theta{/eq}.",
+        "Converting from polar coordinates to Cartesian coordinates is accomplished through {eq}x=r\cos \\theta{/eq} and {eq}y = r\\sin \\theta{/eq}. Conversely, converting from Cartesian coordinates to polar coordinates is accomplished by assigning {eq}r = \\sqrt{x^2 + y^2}{/eq} and {eq}\\theta = \\arctan \\frac{y}{x}{/eq}.",
+        "To convert from Cartesian coordinates to polar coordinates, we use the transformation {eq}r = \\sqrt{x^2 + y^2}{/eq} and {eq}\\theta = \\arctan \\frac{y}{x}{/eq}; to convert from polar coordinates to Cartesian coordinates, we use the transformation {eq}x=r\cos \\theta{/eq} and {eq}y = r\\sin \\theta{/eq}.",
+        "To convert from polar coordinates to Cartesian coordinates, we use the transformation {eq}x=r\cos \\theta{/eq} and {eq}y = r\\sin \\theta{/eq}; to convert from Cartesian coordinates to polar coordinates, we use the transformation {eq}r = \\sqrt{x^2 + y^2}{/eq} and {eq}\\theta = \\arctan \\frac{y}{x}{/eq}.",
+        "The change of variables {eq}r = \\sqrt{x^2 + y^2}{/eq} and {eq}\\theta = \\arctan \\frac{y}{x}{/eq} is used to convert from Cartesian coordinates to polar coordinates. Likewise, the change of variables {eq}x=r\cos \\theta{/eq} and {eq}y = r\\sin \\theta{/eq} is used to convert from polar coordinates to Cartesian coordinates.",
+        "The change of variables {eq}x=r\cos \\theta{/eq} and {eq}y = r\\sin \\theta{/eq} is used to convert from polar coordinates to Cartesian coordinates. Likewise, the change of variables {eq}r = \\sqrt{x^2 + y^2}{/eq} and {eq}\\theta = \\arctan \\frac{y}{x}{/eq} is used to convert from Cartesian coordinates to polar coordinates."
     ]
 }
 
@@ -726,10 +750,17 @@ the_fundamental_theorem_of_calculus_switches = {
 evaluating_limits_via_direct_substitition_template = ["{part1} {part2}"]
 evaluating_limits_via_direct_substitition_switches = {
     "part1": [
-        "When possible, simplest way to evaluate a limit of the function is to simply plug the limit directly into the function. This technique is called the method of direct substitution, and works whenever the function is continuous."
+        "When possible, the simplest way to evaluate a limit of the function is to simply plug the limit directly into the function. This technique is called the method of direct substitution, and works whenever the function is continuous.",
+        "The simplest way to evaluate a limit of the function is the method of direct substitution, which involves substituting the limit directly into the function. This technique works whenever the function is continuous.",
+        "When possible, we can evaluate limits by substituting the limit directly into the function. This is called the method of direct substitution, and it works whenever the function is continuous.",
+        "The method of direct substutition involves calculating limits by substituting them directly into the function. This method works whenever the function is continuous.",
+        "Whenever a function is continuous, the method of direct substutition may be used. This technique involves calculating limits by substituting them directly into the function."
     ],
     "part2": [
-        "Sometimes, even though direct substitution may not be possible initially, it is possible to simplify the argument of the limit so that it is possible."
+        "Sometimes, even though direct substitution may not be possible initially, it is possible to simplify the argument of the limit so that the method of direct substitution can be used.",
+        "Even at times when direct substitution may not be possible initially, it may turn out to be possible after simplifying the argument of the limit.",
+        "Sometimes, discontinuous functions can be converted to continuous functions via simplifying. Therefore, one's first approach to solving limits should be to simplify the argument and check if direct substitution is possible.",
+        "One's first approach to evaluating a limit should be to simplify the argument and check if direct substitution is possible, because discontinuous functions can sometimes be converted to continuous functions via simplifying."
     ]
 }
 
@@ -822,13 +853,13 @@ def make_contexts():
     
     contexts["!!!Path Integrals"] = {'template': path_integrals_template, 'switches': path_integrals_switches}
     contexts["!!!Optimizing via Critical Points"] = {'template': critical_points_template, 'switches': critical_points_switches}
-    
-    
-    # not randomized
     contexts["!!!Approximating Integrals"] = {'template': approximating_integrals_template, 'switches': approximating_integrals_switches}
     contexts["!!!Quotient Rule"] = {'template': quotient_rule_template, 'switches': quotient_rule_switches}
     contexts["!!!Product Rule"] = {'template': product_rule_template, 'switches': product_rule_switches}
+    
     contexts["!!!Polar Coordinates"] = {'template': polar_coordinates_template, 'switches': polar_coordinates_switches}
+    
+    # not randomized
     contexts["!!!The Fundamental Theorem of Calculus"] = {'template': the_fundamental_theorem_of_calculus_template, 'switches': the_fundamental_theorem_of_calculus_switches}
     contexts["!!!Evaluating Limits via Direct Substitution"] = {'template': evaluating_limits_via_direct_substitition_template, 'switches': evaluating_limits_via_direct_substitition_switches}
     contexts["!!!Acceleration, Velocity, and Position"] = {'template': acceleration_velocity_position_template, 'switches': acceleration_velocity_position_switches}
