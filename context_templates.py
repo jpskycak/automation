@@ -2,99 +2,22 @@
 ### CROSS PRODUCT ###
 #####################
 
-cross_product_template = ['{for two vectors}, {taking the cross product} {produces another vector} {having length equal to} {the area of the parallelogram} {whose sides are formed by} {that pair of vectors}. {it is given by the formula} \n{{eq}} {formula} {{/eq}}',
-           '{taking the cross product} {for two vectors} {produces another vector} {having length equal to} {the area of the parallelogram} {whose sides are formed by} {that pair of vectors}. {it is given by the formula} \n{{eq}} {formula} {{/eq}}',
-            '{the area of the parallelogram} {whose sides are formed by} a pair of vectors is obtained by {taking the cross product} of those two vectors. {it is given by the formula} \n{{eq}} {formula} {{/eq}}'
-           ]
+cross_product_template = ['{part1} {part2}']
 
-cross_product_switches = {'for two vectors':['for two vectors',
-                              'for a pair of vectors',
-                              'given two vectors',
-                              'given a pair of vectors'
-                              ],
-           'taking the cross product':['taking the cross product',
-                                      'computing the cross product',
-                                      'evaluating the cross product',
-                                      'performing the cross product'
-                                      ],
-           'produces another vector':['produces another vector',
-                                     'yields another vector',
-                                     'creates another vector',
-                                     'produces a third vector',
-                                     'yields a third vector',
-                                     'creates a third vector',
-                                     'produces an additional vector',
-                                     'yields an additional vector',
-                                     'creates an additional vector'
-                                     ],
-           'having length equal to':['having length equal to',
-                                     'having length equivalent to',
-                                     'having norm equal to',
-                                     'having norm equivalent to',
-                                     'having magnitude equal to',
-                                     'having magnitude equivalent to',
-                                     'whose length is equal to',
-                                     'whose length is equivalent to',
-                                     'whose norm is equal to',
-                                     'whose norm is equivalent to',
-                                     'whose magnitude is equal to',
-                                     'whose magnitude is equivalent to',
-                                     'which has length equal to',
-                                     'which has length equivalent to',
-                                     'which has norm equal to',
-                                     'which has norm equivalent to',
-                                     'which has magnitude equal to',
-                                     'which has magnitude equivalent to',
-                                     'that has length equal to',
-                                     'that has length equivalent to',
-                                     'that has norm equal to',
-                                     'that has norm equivalent to',
-                                     'that has magnitude equal to',
-                                     'that has magnitude equivalent to',
-                                    ],
-            'the area of the parallelogram':['the area of the parallelogram',
-                                            'the area of that parallelogram',
-                                            'the area of a parallelogram'
-                                            ],
-            'whose sides are formed by':['whose sides are formed by',
-                                         'whose edges are formed by',
-                                         'whose sides are given by',
-                                         'whose edges are given by',
-                                         'whose sides are assigned by',
-                                         'whose edges are assigned by',
-                                         'whose sides consist of',
-                                         'whose edges consist of'
-                                        ],
-            'that pair of vectors':['that pair of vectors',
-                                   'those two vectors',
-                                    'those vectors',
-                                    'the vectors'
-                                   ],
-            'it is given by the formula':['it is given by the formula',
-                                          'it is computed by the formula',
-                                          'it is obtained by the formula',
-                                          'it is given by the rule',
-                                          'it is computed by the rule',
-                                          'it is obtained by the rule',
-                                          'the cross product is given by the formula',
-                                          'the cross product is computed by the formula',
-                                          'the cross product is obtained by the formula',
-                                          'the cross product is given by the rule',
-                                          'the cross product is computed by the rule',
-                                          'the cross product is obtained by the rule',
-                                          'this vector is given by the formula',
-                                          'this vector is computed by the formula',
-                                          'this vector is obtained by the formula',
-                                          'this vector is given by the rule',
-                                          'this vector is computed by the rule',
-                                          'this vector is obtained by the rule',
-                                         ],
-            'formula':["\\langle u_1, u_2, u_3 \\rangle \\times \\langle v_1, v_2, v_3 \\rangle = \\langle u_2v_3 - u_3v_2, u_3v_1 - u_1v_3, u_1v_2 - u_2v_1 \\rangle",
-                       "\\langle u_1, u_2, u_3 \\rangle \\times \\langle w_1, w_2, w_3 \\rangle = \\langle u_2w_3 - u_3w_2, u_3w_1 - u_1w_3, u_1w_2 - u_2w_1 \\rangle",
-                      "\\langle a_1, a_2, a_3 \\rangle \\times \\langle b_1, b_2, b_3 \\rangle = \\langle a_2b_3 - a_3b_2, a_3b_1 - a_1b_3, a_1b_2 -a_2b_1 \\rangle",
-                       "\\langle x_1, x_2, x_3 \\rangle \\times \\langle y_1, y_2, y_3 \\rangle = \\langle x_2y_3 - x_3y_2, x_3y_1 - x_1y_3, x_1y_2 - x_2y_1 \\rangle"
-                      ]
-           }
+cross_product_switches = {
+    'part1': [
+        "For two vectors, taking the cross product produces another vector which is perpendicular to the two vectors and has length equal to the area of the parallelogram whose sides are formed by that pair of vectors.",
+        "Taking the cross product of two vectors results in another vector which is perpendicular to the two vectors and whose norm is equal to the area of the parallelogram spanned by those two vectors.",
+        "The cross product of a pair of vectors yields another vector which is not only perpendicular to the pair, but also whose magnitude equals the area of the parallelogram whose sides are formed by pair.",
+        "The cross product of two vectors results in another vector which is perpendicular to the two vectors and also has magnitude equal to the area of the parallelogram whose sides consist of those two vectors."
+    ],
+    "part2": [
+        "The cross product is given by the formula {eq}\\langle u_1, u_2, u_3 \\rangle \\times \\langle v_1, v_2, v_3 \\rangle = \\langle u_2v_3 - u_3v_2, u_3v_1 - u_1v_3, u_1v_2 - u_2v_1 \\rangle{/eq}.",
+        "The computation is given by the formula {eq}\\langle u_1, u_2, u_3 \\rangle \\times \\langle w_1, w_2, w_3 \\rangle = \\langle u_2w_3 - u_3w_2, u_3w_1 - u_1w_3, u_1w_2 - u_2w_1 \\rangle{/eq}.",
+         "The formula for the cross product is {eq}\\langle a_1, a_2, a_3 \\rangle \\times \\langle b_1, b_2, b_3 \\rangle = \\langle a_2b_3 - a_3b_2, a_3b_1 - a_1b_3, a_1b_2 -a_2b_1 \\rangle{/eq}.",
+         "The formula is given by {eq}\\langle x_1, x_2, x_3 \\rangle \\times \\langle y_1, y_2, y_3 \\rangle = \\langle x_2y_3 - x_3y_2, x_3y_1 - x_1y_3, x_1y_2 - x_2y_1 \\rangle{/eq}."
+    ]
+}
 
 ######################
 ### LINE INTEGRALS ###
@@ -812,15 +735,28 @@ derivative_of_exponential_switches = {
     ]
 }
 
+####################################
+### EXPONENTIAL GROWTH AND DECAY ###
+####################################
+
+exponential_growth_and_decay_template = ["{part1} {part2} {part3}"]
+exponential_growth_and_decay_switches = {
+    "part1": [
+   
+    ],
+    "part2": [
+      
+    ],
+    "part3": [
+        
+    ]
+}
+
 
 
 ###############
 
 import random
-import nltk.data
-#nltk.download('punkt')
-tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
-
 
 def make_contexts():
     
@@ -881,11 +817,6 @@ def make_random_context(lookup="!!!Dot Product"):
     template_instance = random.choice(template).format(**switches_instance)
 
     template_instance = template_instance.replace('  ',' ')
-
-    if lookup=="!!!Cross product":
-        sentences = tokenizer.tokenize(template_instance)
-        sentences = [sent.capitalize() for sent in sentences]
-        template_instance = ' '.join(sentences)
 
     print lookup+'\n'+template_instance
     
