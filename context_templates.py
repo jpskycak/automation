@@ -806,13 +806,22 @@ the_chain_rule_switches = {
 ### IMPLICIT DIFFERENTIATION ###
 ################################
 
-implicit_differentiation_template = ["{part1} {part2}"]
+implicit_differentiation_template = ["{part1} {part2} {part3}"]
 implicit_differentiation_switches = {
     "part1": [
-        "When given an equation of ''x'' and ''y'' that is not explicitly solved for ''y'', it is sometimes easier to use implicit differentiation than to solve for ''y'' and take the derivative directly."
+        "When given an equation of ''x'' and ''y'' that is not explicitly solved for ''y'', it is sometimes easier to use implicit differentiation than to solve for ''y'' and take the derivative directly.",
+        "Sometimes, when given an equation of ''x'' and ''y'' that is not explicitly solved for ''y'', it is easier to use implicit differentiation than to solve for ''y'' and take the derivative directly.",
+        "We often take the derivative of functions directly. However, sometimes, when given an equation of ''x'' and ''y'' that is not explicitly solved for ''y'', it is easier to use implicit differentiation.",
+        "We don't always have to solve for a variable before taking the derivative. In fact, when given an equation of ''x'' and ''y'' that is not explicitly solved for ''y'', it is sometimes easier to use implicit differentiation."
     ],
     "part2": [
-        "Implicit differentiation leverages the chain rule, so that {eq}\\frac{dy}{dx}{/eq} arises with each ''y'' term in the equation. Then, one can solve for the derivatives by grouping and dividing the terms which multiply them."
+        "Implicit differentiation leverages the chain rule, so that {eq}\\frac{dy}{dx}{/eq} arises with each ''y'' term in the equation.",
+        "By the chain rule, {eq}\\frac{dy}{dx}{/eq} arises with each ''y'' term in the equation upon differentiation.",
+        "Whenever a ''y'' term in the equation is implicitly differentiatied, a {eq}\\frac{dy}{dx}{/eq} arises via the chain rule."
+    ],
+    "part3": [
+        "Then, one can solve for the derivatives by grouping and dividing the terms which multiply them.",
+        "Then, one can algebraically solve for the derivative afterward."
     ]
 }
 
@@ -823,10 +832,16 @@ implicit_differentiation_switches = {
 error_approximation_with_differentials_template = ["{part1} {part2}"]
 error_approximation_with_differentials_switches = {
     "part1": [
-        "Given a function {eq}f{/eq}, we can use the differential {eq}df{/eq} to approximate the maximum error in {eq}f{/eq} for a given set of measurements and error bounds on those inputs."
+        "Given a function {eq}f{/eq}, we can use the differential {eq}df{/eq} to approximate the maximum error in {eq}f{/eq} for a given set of measurements and error bounds on those inputs.",
+        "We can use the differential {eq}df{/eq} to approximate the maximum error in a function {eq}f{/eq}, given a set of measurements and error bounds on those inputs.",
+        "If we have a set of measurements and error bounds on inputs for a function {eq}f{/eq}, we can use the differential {eq}df{/eq} to approximate the maximum error in {eq}f{/eq}.",
+        "The differential {eq}df{/eq} can be used to approximate the maximum error in a function {eq}f{/eq}, given a set of measurements and error bounds on inputs to the function."
     ],
     "part2": [
-        "The measurements are substituted in for the variables, and the error bounds are substituted in for the differentials of those variables."
+        "After finding the differential, the measurements are substituted in for the input variables, and the error bounds are substituted in for the differentials of the input variables.",
+        "Once the differential is found, measurements are substituted in place of input variables, and the error bounds are substituted in place of the differentials of the input variables.",
+        "The error differential can be evaluated by substituting measurements for input variables, and error bounds for the differentials of the input variables.",
+        "By substituting measurements for input variables and error bounds for the differentials of the input variables, we can evaluate the function's differential as an error approximation."
     ]
 }
 
@@ -928,11 +943,12 @@ def make_contexts():
     contexts["!!!Normal Vector of a Plane"] = {'template': normal_vector_of_a_plane_template, 'switches': normal_vector_of_a_plane_switches}
     contexts["!!!Curvature"] = {'template': curvature_template, 'switches': curvature_switches}
     contexts["!!!The Chain Rule"] = {'template': the_chain_rule_template, 'switches': the_chain_rule_switches}
-
-    # not randomized
     
     contexts["!!!Implicit Differentiation"] = {'template': implicit_differentiation_template, 'switches': implicit_differentiation_switches}
     contexts["!!!Error Approximation with Differentials"] = {'template': error_approximation_with_differentials_template, 'switches': error_approximation_with_differentials_switches}
+
+    # not randomized
+    
     
     return contexts
 
