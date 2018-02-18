@@ -191,8 +191,8 @@ directional_derivatives_switches = {
     "part1": [
         "The gradient of a function is a vector that is obtained by taking the function's partial derivatives component-wise.",
         "Taking the partial derivatives of a function and assigning them as components of a vector yields the function's gradient.",
-        "For a function {eq}f(x,y,z){/eq}, the gradient is given by {eq}\langle f_x, f_y, f_z \rangle{/eq}.",
-        "The gradient of a function {eq}f(x,y,z){/eq} is the vector {eq}\langle f_x, f_y, f_z \rangle{/eq}.",
+        "For a function {eq}f(x,y,z){/eq}, the gradient is given by {eq}\\langle f_x, f_y, f_z \\rangle{/eq}.",
+        "The gradient of a function {eq}f(x,y,z){/eq} is the vector {eq}\\langle f_x, f_y, f_z \\rangle{/eq}.",
         "Computing the partial derivatives of a function {eq}f(x,y,z){/eq} and assigning them as components of a vector produces the gradient of the function."
     ],
     "part2": [
@@ -570,8 +570,8 @@ approximating_integrals_switches = {
         "Integrals can be numerically computed by partitioning the domain of integration into smaller pieces, evaluating the integrand somewhere on each of those pieces, and then adding each piece's contribution to the integral.",
         "Integrals can be numerically approximated by splitting the domain of integration into smaller pieces, evaluating the integrand somewhere on each of those pieces, and then summing each piece's contribution to the integral.",
         "To approximate an integral, we can split the domain of integration into smaller pieces and sum up the area or volume over all of those pieces.",
-        "To numerically commpute an integral, we can split the domain of integration into smaller pieces and sum up the area or volume over all of those pieces.",
-        "To numerically commpute an integral, we can partition the domain of integration into smaller pieces and add up the area or volume over all of those pieces.",
+        "To numerically compute an integral, we can split the domain of integration into smaller pieces and sum up the area or volume over all of those pieces.",
+        "To numerically compute an integral, we can partition the domain of integration into smaller pieces and add up the area or volume over all of those pieces.",
         "Integrals can be approximating by partitioning them into smaller pieces, calculating the area or volume for each piece, and adding up the area or volume of all of the pieces."
     ],
     "part2": [
@@ -659,10 +659,16 @@ polar_coordinates_switches = {
 the_fundamental_theorem_of_calculus_template = ["{part1} {part2}"]
 the_fundamental_theorem_of_calculus_switches = {
     "part1": [
-        "Part 1 of the Fundamental Theorem of Calculus states that for an integral function {eq}F(x) = \int_{x_0}^x f(t)dt{/eq}, the derivative is given by {eq}F'(x) = f(x){/eq}."
+        "Part 1 of the Fundamental Theorem of Calculus states that for an integral function {eq}F(x) = \int_{x_0}^x f(t)dt{/eq}, the derivative is given by {eq}F'(x) = f(x){/eq}.",
+        "According to the first part of the Fundamental Theorem of Calculus, the derivative of an integral function {eq}F(x) = \int_{x_0}^x f(t)dt{/eq} is given by {eq}F'(x) = f(x){/eq}.",
+        "For an integral function {eq}F(x) = \int_{x_0}^x f(t)dt{/eq}, Part 1 of the Fundamental Theorem of Calculus tells us that the derivative is given by {eq}F'(x) = f(x){/eq}.",
+        "If we have an integral function {eq}F(x) = \int_{x_0}^x f(t)dt{/eq}, then we know from the first part of the Fundamental Theorem of Calculus that the derivative is given by {eq}F'(x) = f(x){/eq}."
     ],
     "part2": [
-        "Intuitively, {eq}F(x){/eq} measures the amount of area of {eq}f(t){/eq} from {eq}t=x_0{/eq} to {eq}t=x{/eq}, and the amount of change at {eq}t=x{/eq} is the amount of area introduced at {eq}t=x{/eq}, which is given by {eq}f(x){/eq}."
+        "Intuitively, {eq}F(x){/eq} measures the amount of area of {eq}f(t){/eq} from {eq}t=x_0{/eq} to {eq}t=x{/eq}, and the rate of change in area under {eq}f(t){/eq} at {eq}t=x{/eq} is the rate that area is introduced at {eq}t=x{/eq}, which is given by {eq}f(x) {/eq}.",
+        "We can see this because {eq}F(x){/eq} measures the area under {eq}f(t){/eq} from {eq}t=x_0{/eq} to {eq}t=x{/eq}, and the rate that area is introduced at {eq}t=x{/eq} is given by {eq}f(x){/eq}.",
+        "To see this, think about how {eq}F(x){/eq} measures the area under {eq}f(t){/eq} from {eq}t=x_0{/eq} to {eq}t=x{/eq}. The rate of change in area under {eq}f(t){/eq} at {eq}t=x{/eq} is the rate that area is introduced at {eq}t=x{/eq}, which is given by {eq}f(x) {/eq}.",
+        "It is easier to understand this if we think about how {eq}F(x){/eq} measures the area under {eq}f(t){/eq} from {eq}t=x_0{/eq} to {eq}t=x{/eq}. The rate of change in area under {eq}f(t){/eq} at {eq}t=x{/eq} is the rate that area is introduced at {eq}t=x{/eq}, which is given by {eq}f(x) {/eq}."
     ]
 }
 
@@ -673,17 +679,17 @@ the_fundamental_theorem_of_calculus_switches = {
 evaluating_limits_via_direct_substitition_template = ["{part1} {part2}"]
 evaluating_limits_via_direct_substitition_switches = {
     "part1": [
-        "When possible, the simplest way to evaluate a limit of the function is to simply plug the limit directly into the function. This technique is called the method of direct substitution, and works whenever the function is continuous.",
-        "The simplest way to evaluate a limit of the function is the method of direct substitution, which involves substituting the limit directly into the function. This technique works whenever the function is continuous.",
-        "When possible, we can evaluate limits by substituting the limit directly into the function. This is called the method of direct substitution, and it works whenever the function is continuous.",
-        "The method of direct substutition involves calculating limits by substituting them directly into the function. This method works whenever the function is continuous.",
-        "Whenever a function is continuous, the method of direct substutition may be used. This technique involves calculating limits by substituting them directly into the function."
+        "When possible, the simplest way to evaluate a limit of the function is to simply plug the limit directly into the function. This technique is called the method of direct substitution, and works whenever substituting the limit does not lead to indeterminate form.",
+        "The simplest way to evaluate a limit of the function is the method of direct substitution, which involves substituting the limit directly into the function. This technique works whenever substituting the limit does not lead to indeterminate form.",
+        "When possible, we can evaluate limits by substituting the limit directly into the function. This is called the method of direct substitution, and it works whenever substituting the limit does not lead to indeterminate form.",
+        "The method of direct substutition involves calculating limits by substituting them directly into the function. This method works whenever substituting the limit does not lead to indeterminate form.",
+        "Whenever substituting the limit does not lead to indeterminate form, the method of direct substitution may be used. This technique involves calculating limits by substituting them directly into the function."
     ],
     "part2": [
         "Sometimes, even though direct substitution may not be possible initially, it is possible to simplify the argument of the limit so that the method of direct substitution can be used.",
         "Even at times when direct substitution may not be possible initially, it may turn out to be possible after simplifying the argument of the limit.",
-        "Sometimes, discontinuous functions can be converted to continuous functions via simplifying. Therefore, one's first approach to solving limits should be to simplify the argument and check if direct substitution is possible.",
-        "One's first approach to evaluating a limit should be to simplify the argument and check if direct substitution is possible, because discontinuous functions can sometimes be converted to continuous functions via simplifying."
+        "Sometimes, limits whose form is indeterminate can be converted to limits whose form is determinate via simplifying. Therefore, one's first approach to solving limits should be to simplify the argument and check if direct substitution is possible.",
+        "One's first approach to evaluating a limit should be to simplify the argument and check if direct substitution is possible, because indeterminate limits can sometimes be converted to determinate limits via simplifying."
     ]
 }
 
@@ -694,10 +700,16 @@ evaluating_limits_via_direct_substitition_switches = {
 acceleration_velocity_position_template = ["{part1} {part2}"]
 acceleration_velocity_position_switches = {
     "part1": [
-        "When working with acceleration, velocity, and position, it is vital to know that velocity is the derivative of position, and acceleration is the derivative of velocity."
+        "When working with acceleration, velocity, and position, it is vital to know that velocity is the derivative of position, and acceleration is the derivative of velocity.",
+        "If a particle's position is given by a function, then its velocity is given by the first derivative of that function and its acceleration is given by the second derivative of that function.",
+        "Given a position function for some object, the object's velocity is the derivative of its position, and the object's acceleration is the derivative of its velocity.",
+        "For an object whose position is given by a function, its velocity is obtained by differentiating the position function, and its acceleration is obtained by differentiating the velocity function."
     ],
     "part2": [
-        "Thus, one can find velocity by integrating acceleration, and one can find position by integrating velocity."
+        "Thus, one can find velocity by integrating acceleration, and one can find position by integrating velocity.",
+        "Consequently, to find velocity, we can integrate acceleration, and to find position, we can integrate velocity.",
+        "Integrating acceleration thus yields velocity, and integrating velocity thus yields position.",
+        "We can find velocity, then, by integrating acceleration, and position by integrating velocity."
     ]
 }
 
@@ -705,16 +717,27 @@ acceleration_velocity_position_switches = {
 ### CHARACTERISTIC POLYNOMIAL ###
 #################################
 
-characteristic_polynomial_template = ["{part1} {part2} {part3}"]
+characteristic_polynomial_template = ["{part1} {part2}"]
 characteristic_polynomial_switches = {
     "part1": [
-        "For a differential equation {eq}ay' ' + by' + cy = 0{/eq}, the characteristic polynomial is given by {eq}ar^2 + br + c = 0{/eq}."
+        "For a differential equation {eq}ay' ' + by' + cy = 0{/eq}, the characteristic polynomial is given by {eq}ar^2 + br + c = 0{/eq}.",
+        "The characteristic polynomial of a differential equation {eq}ay' ' + by' + cy = 0{/eq} is given by {eq}ar^2 + br + c = 0{/eq}.",
+        "Given a differential equation {eq}ay' ' + by' + cy = 0{/eq}, the characteristic polynomial is defined as {eq}ar^2 + br + c = 0{/eq}.",
+        "For a differential equation {eq}Ay' ' + By' + Cy = 0{/eq}, the characteristic polynomial is given by {eq}Ar^2 + Br + C = 0{/eq}.",
+        "The characteristic polynomial of a differential equation {eq}Ay' ' + By' + Cy = 0{/eq} is given by {eq}Ar^2 + Br + C = 0{/eq}.",
+        "Given a differential equation {eq}Ay' ' + By' + Cy = 0{/eq}, the characteristic polynomial is defined as {eq}Ar^2 + Br + C = 0{/eq}.",
+        "For a differential equation {eq}my' ' + ny' + py = 0{/eq}, the characteristic polynomial is given by {eq}mr^2 + nr + p = 0{/eq}.",
+        "The characteristic polynomial of a differential equation {eq}my' ' + ny' + py = 0{/eq} is given by {eq}mr^2 + nr + p = 0{/eq}.",
+        "Given a differential equation {eq}my' ' + ny' + py = 0{/eq}, the characteristic polynomial is defined as {eq}mr^2 + nr + p = 0{/eq}.",
+        "For a differential equation {eq}My' ' + Ny' + Py = 0{/eq}, the characteristic polynomial is given by {eq}Mr^2 + Nr + P = 0{/eq}.",
+        "The characteristic polynomial of a differential equation {eq}My' ' + Ny' + Py = 0{/eq} is given by {eq}Mr^2 + Nr + P = 0{/eq}.",
+        "Given a differential equation {eq}My' ' + Ny' + Py = 0{/eq}, the characteristic polynomial is defined as {eq}Mr^2 + Nr + P = 0{/eq}."
     ],
     "part2": [
-        "If the roots {eq}r_1, r_2{/eq} of the polynomial are distinct, the solutions are given by the real and imaginary parts of {eq}c_1e^{r_1x} + c_2e^{r_2x}{/eq}."
-    ],
-    "part3": [
-        "If the roots {eq}r_1=r_2 = r{/eq} are repeated, then the solutions are given by the real and imaginary parts of {eq}c_1e^{rx} + c_2xe^{rx}{/eq}."
+        "If the roots {eq}r_1, r_2{/eq} of the polynomial are distinct, the solutions are given by the real and imaginary parts of {eq}c_1e^{r_1x} + c_2e^{r_2x}{/eq}. If the roots {eq}r_1=r_2 = r{/eq} are repeated, then the solutions are given by the real and imaginary parts of {eq}c_1e^{rx} + c_2xe^{rx}{/eq}.",
+        "If the roots {eq}r_1=r_2 = r{/eq} are repeated, then the solutions are given by the real and imaginary parts of {eq}c_1e^{rx} + c_2xe^{rx}{/eq}. If the roots {eq}r_1, r_2{/eq} of the polynomial are distinct, the solutions are given by the real and imaginary parts of {eq}c_1e^{r_1x} + c_2e^{r_2x}{/eq}.",
+        "If the characteristic polynomial has distinct roots {eq}r_1, r_2{/eq}, then the solutions of the differential equation are given by the real and imaginary parts of {eq}c_1e^{r_1x} + c_2e^{r_2x}{/eq}. Otherwise, if the characteristic polynomial has a repeated root {eq}r_1=r_2 = r{/eq}, then the solutions of the differential equation are given by the real and imaginary parts of {eq}c_1e^{rx} + c_2xe^{rx}{/eq}.",
+        "If the characteristic polynomial has a repeated root {eq}r_1=r_2 = r{/eq}, then the solutions of the differential equation are given by the real and imaginary parts of {eq}c_1e^{rx} + c_2xe^{rx}{/eq}. Otherwise, if the characteristic polynomial has distinct roots {eq}r_1, r_2{/eq}, then the solutions of the differential equation are given by the real and imaginary parts of {eq}c_1e^{r_1x} + c_2e^{r_2x}{/eq}."
     ]
 }
 
@@ -722,16 +745,19 @@ characteristic_polynomial_switches = {
 ### DERIVATIVE OF THE EXPONENTIAL FUNCTION ###
 ##############################################
 
-derivative_of_exponential_template = ["{part1} {part2} {part3}"]
+derivative_of_exponential_template = ["{part1} {part2}"]
 derivative_of_exponential_switches = {
     "part1": [
-        "The exponential function is given by {eq}e^x{/eq}, where {eq}e \\approx 2.71{/eq} is Euler's constant. It is the function with the special property that its derivative is itself."
+        "The exponential function is given by {eq}e^x{/eq}, where {eq}e \\approx 2.71{/eq} is Euler's constant. It is the function with the special property that its derivative is itself. That is to say, if {eq}f(x) = e^x{/eq}, then {eq}f'(x) = e^x{/eq}, and thus {eq}f^{(n)}(x) = e^x{/eq} for every ''n''th derivative.",
+        "Differentiating the exponential function leaves it unchanged: if {eq}f(x) = e^x{/eq}, then {eq}f'(x) = e^x{/eq}, and thus {eq}f^{(n)}(x) = e^x{/eq} for every ''n''th derivative.",
+        "The exponential function has the special property that it is its own derivative. Formally, if {eq}f(x) = e^x{/eq}, then {eq}f'(x) = e^x{/eq}, and thus {eq}f^{(n)}(x) = e^x{/eq} for every ''n''th derivative.",
+        "The exponential function is given by {eq}e^x{/eq} and is its own derivative. In other words, if {eq}f(x) = e^x{/eq}, then {eq}f'(x) = e^x{/eq}, and thus {eq}f^{(n)}(x) = e^x{/eq} for every ''n''th derivative."
     ],
     "part2": [
-        "That is to say, if {eq}f(x) = e^x{/eq}, then {eq}f'(x) = e^x{/eq}, and thus {eq}f^{(n)}(x) = e^x{/eq} for every ''n''th derivative."
-    ],
-    "part3": [
-        "We sometimes also encounter exponential functions of the form {eq}e^{rx}{/eq} for a constant {eq}r{/eq}. If {eq}f(x) = e^{rx}{/eq}, then by the chain rule we have {eq}f'(x) = re^{rx}{/eq}, and thus {eq}f^{(n)}(x) = r^ne^{rx}{/eq} for every ''n''th derivative."
+        "We sometimes also encounter exponential functions of the form {eq}e^{rx}{/eq} for a constant {eq}r{/eq}. If {eq}f(x) = e^{rx}{/eq}, then by the chain rule we have {eq}f'(x) = re^{rx}{/eq}, and thus {eq}f^{(n)}(x) = r^ne^{rx}{/eq} for every ''n''th derivative.",
+        "Derivatives of exponential functions of the form {eq}e^{rx}{/eq} for a constant {eq}r{/eq}, then, follow a pattern: if {eq}f(x) = e^{rx}{/eq}, then by the chain rule we have {eq}f'(x) = re^{rx}{/eq}, and thus {eq}f^{(n)}(x) = r^ne^{rx}{/eq} for every ''n''th derivative.",
+        "Exponential functions of the form {eq}e^{rx}{/eq} for a constant {eq}r{/eq}, then, have simple derivatives: if {eq}f(x) = e^{rx}{/eq}, then by the chain rule we have {eq}f'(x) = re^{rx}{/eq}, and thus {eq}f^{(n)}(x) = r^ne^{rx}{/eq} for every ''n''th derivative.",
+        "Extending this to exponential functions of the form {eq}f(x) = e^{rx}{/eq} for a constant {eq}r{/eq}, then, we have that {eq}f'(x) = re^{rx}{/eq} and thus {eq}f^{(n)}(x) = r^ne^{rx}{/eq} for every ''n''th derivative."
     ]
 }
 
@@ -739,19 +765,117 @@ derivative_of_exponential_switches = {
 ### EXPONENTIAL GROWTH AND DECAY ###
 ####################################
 
-exponential_growth_and_decay_template = ["{part1} {part2} {part3}"]
+exponential_growth_and_decay_template = ["{part1} {part2}"]
 exponential_growth_and_decay_switches = {
     "part1": [
-   
+        "Exponential functions are used to model quantities over time, when the quantity's increase or decrease at a given time is proportional to the quantity itself at that time.",
+        "When quantity's increase or decrease at a given time is proportional to the quantity itself at that time, we can model the quantity with an exponential function.",
+        "When we want to quantity whose increase or decrease at a given time is proportional to the quantity itself, we use an exponential function.",
+        "In order to model quantity whose increase or decrease at a given time is proportional to the quantity itself, need to use exponential functions.",
+        "Exponential functions are useful when we want to model a quantity whose increase or decrease at a given time is proportional to the quantity itself."
     ],
     "part2": [
-      
-    ],
-    "part3": [
-        
+        "The amount at time t is given by {eq}A(t) = A(0)e^{kt}{/eq}, where A(0) is the initial amount and k is the rate of growth or decay (if k is positive, then it is growth; if k is negative, then it is decay).",
+        "For an initial amount {eq}A_0{/eq} and a growth rate k (which is called the decay rate, if k is negative), the amount at time t is given by {eq}A(t) = A_0e^{kt}{/eq}.",
+        "If the initial amount is given by {eq}A_0{/eq} and the rate of growth or decay is given by k, then we can model the amount at time t with the function {eq}A(t) = A_0e^{kt}{/eq}."
+        "The function {eq}A(t) = A(0)e^{kt}{/eq} is used to model the amount of the quantity at time t, where A(0) is the initial amount and k is the rate of growth or decay. It is growth if k is positive, and decay if k is negative."
     ]
 }
 
+######################
+### THE CHAIN RULE ###
+######################
+
+the_chain_rule_template = ["{part1} {part2}"]
+the_chain_rule_switches = {
+    "part1": [
+        "The chain rule is extremely useful for calculating derivatives of compositions of functions. It is given by the rule {eq} f(g(x))' = f'(g(x))g'(x) {/eq}.",
+        "When calculating derivatives of compositions of functions, the chain rule comes in handy: {eq} f(g(x))' = f'(g(x))g'(x) {/eq}.",
+        "For compositions of functions, we use the chain rule to calculate the derivative: {eq} f(g(x))' = f'(g(x))g'(x) {/eq}.",
+        "When we want to calculate the derivative of a composition of functions, we use the chain rule, which is given by {eq} f(g(x))' = f'(g(x))g'(x) {/eq}."
+    ],
+    "part2": [
+        "It is called the chain rule because when iterated through many compositions, function composition can be thought of as a link in a chain, and you must traverse all links to find the resulting derivative.",
+        "The chain rule derives its name from the idea that function composition can be thought of as a link in a chain, and you must traverse all links to find the resulting derivative.",
+        "To understand why the chain rule is called the chain rule, think of function composition as a link in a chain, where you must traverse all links to find the derivative.",
+        "By thinking of function composition as links in a chain, we can see where the rule gets its name."
+    ]
+}
+
+################################
+### IMPLICIT DIFFERENTIATION ###
+################################
+
+implicit_differentiation_template = ["{part1} {part2}"]
+implicit_differentiation_switches = {
+    "part1": [
+        "When given an equation of ''x'' and ''y'' that is not explicitly solved for ''y'', it is sometimes easier to use implicit differentiation than to solve for ''y'' and take the derivative directly."
+    ],
+    "part2": [
+        "Implicit differentiation leverages the chain rule, so that {eq}\\frac{dy}{dx}{/eq} arises with each ''y'' term in the equation. Then, one can solve for the derivatives by grouping and dividing the terms which multiply them."
+    ]
+}
+
+##############################################
+### ERROR APPROXIMATION WITH DIFFERENTIALS ###
+##############################################
+
+error_approximation_with_differentials_template = ["{part1} {part2}"]
+error_approximation_with_differentials_switches = {
+    "part1": [
+        "Given a function {eq}f{/eq}, we can use the differential {eq}df{/eq} to approximate the maximum error in {eq}f{/eq} for a given set of measurements and error bounds on those inputs."
+    ],
+    "part2": [
+        "The measurements are substituted in for the variables, and the error bounds are substituted in for the differentials of those variables."
+    ]
+}
+
+################################
+### NORMAL VECTOR OF A PLANE ###
+################################
+
+normal_vector_of_a_plane_template = ["{part1} {part2}"]
+normal_vector_of_a_plane_switches = {
+    "part1": [
+        "For a plane {eq}Ax + By + Cz = k{/eq}, the standard normal vector is given by {eq}\\langle A, B, C \\rangle{/eq}.",
+        "The standard normal vector of a plane {eq}Ax + By + Cz = k{/eq} is given by {eq}\\langle A, B, C \\rangle{/eq}.",
+        "The vector {eq}\\langle A, B, C \\rangle{/eq} is the standard normal vector for planes of the form {eq}Ax + By + Cz = k{/eq}.",
+        "For a plane {eq}Mx + Ny + Pz = k{/eq}, the standard normal vector is given by {eq}\\langle M, N, P \\rangle{/eq}.",
+        "The standard normal vector of a plane {eq}Mx + Ny + Pz = k{/eq} is given by {eq}\\langle M, N, P \\rangle{/eq}.",
+        "The vector {eq}\\langle M, N, P \\rangle{/eq} is the standard normal vector for planes of the form {eq}Mx + Ny + Pz = k{/eq}.",
+        "For a plane {eq}ax + by + cz = k{/eq}, the standard normal vector is given by {eq}\\langle a, b, c \\rangle{/eq}.",
+        "The standard normal vector of a plane {eq}ax + by + cz = k{/eq} is given by {eq}\\langle a, b, c \\rangle{/eq}.",
+        "The vector {eq}\\langle a, b, c \\rangle{/eq} is the standard normal vector for planes of the form {eq}ax + by + cz = k{/eq}.",
+        "For a plane {eq}mx + ny + pz = k{/eq}, the standard normal vector is given by {eq}\\langle m, n, p \\rangle{/eq}.",
+        "The standard normal vector of a plane {eq}mx + ny + pz = k{/eq} is given by {eq}\\langle m, n, p \\rangle{/eq}.",
+        "The vector {eq}\\langle m, n, p \\rangle{/eq} is the standard normal vector for planes of the form {eq}mx + ny + pz = k{/eq}."
+    ],
+    "part2": [
+        "This vector runs perpendicular to the plane and can be thought of as the new \"up\" or \"down\" direction in a coordinate system whose horizontal directions are given by vectors within the plane.",
+        "This vector can be thought of as the new \"up\" or \"down\" direction in a coordinate system whose horizontal directions are given by vectors within the plane, since the vector itself runs perpendicular to the plane.",
+        "Since this vector is perpendicular to the plane, it can be thought of as the new \"up\" or \"down\" direction in a coordinate system whose horizontal directions are given by vectors within the plane."
+    ]
+}
+
+#################
+### CURVATURE ###
+#################
+
+curvature_template = ["{part1} {part2}"]
+curvature_switches = {
+    "part1": [
+        "The curvature of a curve ''r(t)'' measures how fast the curve is changing direction at a given point, and is defined as {eq}\kappa = \\frac{dT}{ds}{/eq} where ''T'' is the unit tangent vector.",
+        "For a curve ''r(t)'', the curvature {eq}\kappa = \\frac{dT}{ds}{/eq} measures how fast the curve is changing direction at a given point.  Here, ''T'' is the unit tangent vector",
+        "For a curve ''r(t)'', the rate at which the curve is changing direction at a point is given by the curvature, {eq}\kappa = \\frac{dT}{ds}{/eq} where ''T'' is the unit tangent vector.",
+        "The rate at which a curve ''r(t)'' is changing direction at a point called its curvature, {eq}\kappa = \\frac{dT}{ds}{/eq} where ''T'' is the unit tangent vector.",
+        "Curvature is the rate at which a curve changes direction. For a curve ''r(t)'', the curvature is given by {eq}\kappa = \\frac{dT}{ds}{/eq}  where ''T'' is the unit tangent vector."
+    ],
+    "part2": [
+        "However, it is easier to compute curvature according to the formula \kappa = \\frac{||r'(t) \times r' '(t)||}{||r'(t)||^3}.",
+        "However, curvature is more easily computed via the formula \kappa = \\frac{||r'(t) \times r' '(t)||}{||r'(t)||^3}.",
+        "However, the formula \kappa = \\frac{||r'(t) \times r' '(t)||}{||r'(t)||^3} is an easier way to compute curvature."
+    ]
+}
 
 
 ###############
@@ -776,7 +900,7 @@ def make_contexts():
     contexts['!!!Tangent Lines'] = {'template': tangent_lines_template, 'switches': tangent_lines_switches}
 
     contexts['!!!Derivative as Rate of Change'] = {'template': derivative_as_rate_of_change_template, 'switches': derivative_as_rate_of_change_switches}
-    contexts['!!!Tangent Planes'] = {'template': tangent_planes_template, 'switches': tangent_planes_switches}
+    contexts['!!!Tangent Plane to a Surface'] = {'template': tangent_planes_template, 'switches': tangent_planes_switches}
     contexts["!!!L'Hopital's Rule"] = {'template': lhopitals_rule_template, 'switches': lhopitals_rule_switches}
     contexts["!!!Hooke's Law"] = {'template': hookes_law_template, 'switches': hookes_law_switches}
     contexts["!!!Kinematics"] = {'template': kinematics_template, 'switches': kinematics_switches}
@@ -794,16 +918,21 @@ def make_contexts():
     contexts["!!!Product Rule"] = {'template': product_rule_template, 'switches': product_rule_switches}
     
     contexts["!!!Polar Coordinates"] = {'template': polar_coordinates_template, 'switches': polar_coordinates_switches}
-    
-    # not randomized
     contexts["!!!The Fundamental Theorem of Calculus"] = {'template': the_fundamental_theorem_of_calculus_template, 'switches': the_fundamental_theorem_of_calculus_switches}
-    contexts["!!!Evaluating Limits via Direct Substitution"] = {'template': evaluating_limits_via_direct_substitition_template, 'switches': evaluating_limits_via_direct_substitition_switches}
     contexts["!!!Acceleration, Velocity, and Position"] = {'template': acceleration_velocity_position_template, 'switches': acceleration_velocity_position_switches}
     contexts["!!!The Characteristic Polynomial"] = {'template': characteristic_polynomial_template, 'switches': characteristic_polynomial_switches}
+    contexts["!!!Evaluating Limits via Direct Substitution"] = {'template': evaluating_limits_via_direct_substitition_template, 'switches': evaluating_limits_via_direct_substitition_switches}
+    
     contexts["!!!Derivative of the Exponential Function"] = {'template': derivative_of_exponential_template, 'switches': derivative_of_exponential_switches}
+    contexts["!!!Modeling with Exponential Functions"] = {'template': exponential_growth_and_decay_template, 'switches': exponential_growth_and_decay_switches}
+    contexts["!!!Normal Vector of a Plane"] = {'template': normal_vector_of_a_plane_template, 'switches': normal_vector_of_a_plane_switches}
+    contexts["!!!Curvature"] = {'template': curvature_template, 'switches': curvature_switches}
+    contexts["!!!The Chain Rule"] = {'template': the_chain_rule_template, 'switches': the_chain_rule_switches}
 
-
-
+    # not randomized
+    
+    contexts["!!!Implicit Differentiation"] = {'template': implicit_differentiation_template, 'switches': implicit_differentiation_switches}
+    contexts["!!!Error Approximation with Differentials"] = {'template': error_approximation_with_differentials_template, 'switches': error_approximation_with_differentials_switches}
     
     return contexts
 
