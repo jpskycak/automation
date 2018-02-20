@@ -413,9 +413,9 @@ arc_length_switches = {
         "When integrating, we usually use\n{eq}ds = \sqrt{ \\frac{dx^2}{dx^2} + \\frac{dy^2}{dx^2} }dx = \sqrt{ 1 + (\\frac{dy}{dx})^2 }dx{/eq}\n"
     ],
     "part3": [
-        "We can also do this with differentials other than {eq}dx{/eq} -- for example, for parametrized functions, we have\n{eq}ds = \sqrt{ (\\frac{ds}{dt})^2 + (\\frac{dy}{dt})^2 }dt{/eq}.",
-        "Likewise, for parametrized functions, we use\n{eq}ds = \sqrt{ (\\frac{ds}{dt})^2 + (\\frac{dy}{dt})^2 }dt{/eq}.",
-        "For parametrized functions, the formula \n{eq}ds = \sqrt{ (\\frac{ds}{dt})^2 + (\\frac{dy}{dt})^2 }dt{/eq}\n is derived in a similar fashion."
+        "We can also do this with differentials other than {eq}dx{/eq} -- for example, for parametrized functions, we have\n{eq}ds = \sqrt{ (\\frac{dx}{dt})^2 + (\\frac{dy}{dt})^2 }dt{/eq}.",
+        "Likewise, for parametrized functions, we use\n{eq}ds = \sqrt{ (\\frac{dx}{dt})^2 + (\\frac{dy}{dt})^2 }dt{/eq}.",
+        "For parametrized functions, the formula \n{eq}ds = \sqrt{ (\\frac{dx}{dt})^2 + (\\frac{dy}{dt})^2 }dt{/eq}\n is derived in a similar fashion."
     ]
 }
 
@@ -892,6 +892,49 @@ curvature_switches = {
     ]
 }
 
+#################################
+### AREA IN POLAR COORDINATES ###
+#################################
+
+area_in_polar_coordinates_template = ["{part1} {part2}"]
+area_in_polar_coordinates_switches = {
+    "part1": [
+        "The area differential for polar coordinates is {eq}dA = rdrd\theta{/eq}. This differential is needed for evaluating area integrals of functions explicitly given in polar form, and it can also be helpful for evaluating area integrals which would be made easier by transforming to polar coordinates."
+    ],
+    "part2": [
+        "This kind of transformation can be useful to exploit circular symmetry which would otherwise be ignored by rectangular coordinates."
+    ]
+}
+
+############################
+### INTEGRATION BY PARTS ###
+############################
+
+integration_by_parts_template = ["{part1} {part2}"]
+integration_by_parts_switches = {
+    "part1": [
+        "Integration by parts is an integral transformation method that is especially useful when an integral would be made simpler if one of the terms were differentiated.",
+        "When an integral would be made simpler if one of the terms were differentiated, we can use integration by parts."
+    ],
+    "part2": [
+        "It is derived by integrating the product rule for differentiation, which is given by {eq}(uv)' = u'v + uv'{/eq}, to yield {eq}\int udv = uv - \int vdu {/eq}.",
+        "The formula for integration by parts comes from integrating the product rule for differentiation, which is given by {eq}(uv)' = u'v + uv'{/eq}, to yield {eq}\int udv = uv - \int vdu {/eq}."
+    ]
+}
+
+##########################################
+### REVERSING THE ORDER OF INTEGRATION ###
+##########################################
+
+reversing_the_order_of_integration_template = ["{part1} {part2}"]
+reversing_the_order_of_integration_switches = {
+    "part1": [
+        "In multivariable integrals, changing the order of integration does not change the integral, provided we ensure that we are integrating over the same domain."
+    ],
+    "part2": [
+        "Sometimes, it is helpful to change the order of integration to integrate a particular variable first, so that the following integrals will be made easier."
+    ]
+}
 
 ###############
 
@@ -948,7 +991,9 @@ def make_contexts():
     contexts["!!!Error Approximation with Differentials"] = {'template': error_approximation_with_differentials_template, 'switches': error_approximation_with_differentials_switches}
 
     # not randomized
-    
+    contexts["!!!Area in Polar Coordinates"] = {'template': area_in_polar_coordinates_template, 'switches': area_in_polar_coordinates_switches}
+    contexts["!!!Integration By Parts"] = {'template': integration_by_parts_template, 'switches': integration_by_parts_switches}
+    contexts["!!!Reversing the Order of Integration"] = {'template': reversing_the_order_of_integration_template, 'switches': reversing_the_order_of_integration_switches}
     
     return contexts
 
