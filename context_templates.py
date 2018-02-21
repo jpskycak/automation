@@ -899,7 +899,7 @@ curvature_switches = {
 area_in_polar_coordinates_template = ["{part1} {part2}"]
 area_in_polar_coordinates_switches = {
     "part1": [
-        "The area differential for polar coordinates is {eq}dA = rdrd\theta{/eq}. This differential is needed for evaluating area integrals of functions explicitly given in polar form, and it can also be helpful for evaluating area integrals which would be made easier by transforming to polar coordinates."
+        "The area differential for polar coordinates is {eq}dA = rdrd\\theta{/eq}. This differential is needed for evaluating area integrals of functions explicitly given in polar form, and it can also be helpful for evaluating area integrals which would be made easier by transforming to polar coordinates."
     ],
     "part2": [
         "This kind of transformation can be useful to exploit circular symmetry which would otherwise be ignored by rectangular coordinates."
@@ -935,6 +935,69 @@ reversing_the_order_of_integration_switches = {
         "Sometimes, it is helpful to change the order of integration to integrate a particular variable first, so that the following integrals will be made easier."
     ]
 }
+
+'''
+!!!Changing the Index of Summation
+A series can be expressed in many different ways -- for example, the sum 1 + 2 + ... + 10 can be written not only as {eq}\sum_{n=1}^{10} n{/eq}, but also as {eq}\sum_{n=2}^{11} n-1{/eq}. Sometimes, it is useful to convert between these different representations of a sum, so that we can combine or simplify series.
+
+!!!U-Substitution
+Integrals can sometimes be made simpler through a change of variables. The convention is to call the new variable ''u''. In order to express the integral in terms of the new variable, we need to write ''u'' as a function of the old variable and ''du'' as a function of the old differential. That is, if we define {eq}u=f(x){/eq}, then {eq}du = f'(x)dx{/eq}.
+
+!!!U-Substitution
+Switching to a new variable can sometimes make integrals easier to evaluate. We call new variable ''u'', and we write ''u'' as a function of the old variable and ''du'' as a function of the old differential. Then we find the new integral by substituting {eq}u=f(x){/eq} and {eq}du = f'(x)dx{/eq}.
+
+!!!Definite Integrals
+To evaluate a definite integral, we first find the antiderivative of the integrand. Then, we evaluate the antiderivative at the upper and lower bounds. Lastly, we subtract the result at the lower bound from the result at the upper bound.
+
+!!!Squeeze Theorem
+The Squeeze Theorem can be used to find the limit of a function when we can "squeeze" it between two other functions whose limits are the same. If {eq}f(x) \leq g(x) \leq h(x){/eq}, then {eq}\lim_{x \rightarrow a} f(x) \leq \lim_{x \rightarrow a} g(x) \leq \lim_{x \rightarrow a} h(x){/eq}, and if {eq}\lim_{x \rightarrow a} f(x) = \lim_{x \rightarrow a} h(x) = L{/eq}, then {eq}L \leq \lim_{x \rightarrow a} g(x) \leq L{/eq}, and consequently {eq}\lim_{x \rightarrow a} g(x) = L{/eq}.
+
+!!!Angle of Intersection between Two Curves
+To find the angle of intersection between two curves, we can find the angle of intersection between their tangent vectors at the point of intersection. The angle of intersection between two vectors can be computed using the dot product -- since {eq}a \cdot b = ||a||||b|| \cos \theta{/eq}, we have {eq} \theta = \arccos \frac{a \cdot b}{||a|| ||b||}{/eq}.
+
+!!!Disk Method
+The disk method involves calculating the volume of a solid of revolution by splitting it up into a line of infinitesimally tiny disks, and then integrating the areas of those disks along the line. If the distance between a function and the axis of revolution is given by {eq}r(x){/eq} and we want to revolve the region between {eq}x_0{/eq} and {eq}x_1{/eq}, then the disk method calculates the volume integral as {eq}\int_{x_0}^{x_1} \pi r(x)^2 dx{/eq}.
+
+!!!Integral as Continuous Sum
+Whereas a series is a sum over a domain of discrete points, the integral can be interpreted as the sum of a function over a continuous domain. It is useful for calculating the total sum of a function which changes continuously -- for example, if we know the rate at which a quantity continuously changes over time, we can calculate the total change in quantity by integrating the rate over time.
+
+!!!Vertex Form of Parabola
+The vertex form of a parabola is {eq}y - k = 4p(x-h)^2{/eq}, where {eq}(h,k){/eq} is the vertex and {eq}p{/eq} tells how many units upward (for an upward-opening parabola) or downward (for a downward-facing parabola) one must travel from the vertex to get to the focus. In order to get a quadratic equation the form {eq}y - k = 4p(x-h)^2{/eq}, it is often necessary to complete the square.
+
+!!!Partial Fractions
+Integrals of rational functions sometimes require the use of partial fractions. For example, if the integrand is {eq}frac{1}{x(x^2+3)}{/eq}, then it can be decomposed into some sum of fractions {eq}\frac{a}{x} + \frac{bx+c}{x^2+3}{/eq} for some constants ''a'', ''b'', ''c''. To find those constants, we set up an equation {eq}1 = \frac{a}{x} + \frac{bx+c}{x^2+3}{/eq} and solve.
+
+!!!Augmented Matrix for a Linear System
+The augmented matrix for a system of linear equations gives the coefficients and constants in the system. Each row corresponds to an equation, the rightmost entry of a row corresponds to the constant of the equation, and the other entries correspond to the coefficients of the equation. For example, a row [[1, 2, 3] in an augmented matrix would correspond to the equation {eq}1x + 2y = 3{/eq}.
+
+!!!Unit Tangent and Normal Vectors
+For a trajectory given by {eq}r(t){/eq}, the tangent vector is given by the derivative, {eq}r'(t){/eq}. The unit tangent vector is obtained by normalizing the tangent vector: {eq}T(t) = \\frac{r'(t)}{||r'(t)||}{/eq}
+The unit normal vector can be obtained by rotating the unit tangent vector 90 degrees, which can be done through the transformation {eq}(x,y) \rightarrow (-y,x){/eq}. However, in higher dimensions, it is easier to use the formula {eq}N(t) = \\frac{T'(t)}{||T'(t)||}{/eq}.
+
+!!!Surfaces of Revolution
+The surface areas of surfaces of revolution can be calculated by splitting the surface up into a line of infinitesimally tiny cylinders, and then integrating the areas of those disks along the axis. If the distance between a function and the axis of revolution is given by {eq}r(t){/eq}, then each tiny cylinder has surface area {eq}2\pi r(t) ds{/eq}, where {eq}ds = \sqrt{x'(t)^2 + y'(t)^2} dt{/eq} is the surface differential. Thus, the surface integral is given by {eq}\int_{x_0}^{x_1} 2\pi r(t) \sqrt{x'(t)^2 + y'(t)^2} dt{/eq}.
+
+!!!Basis of a Vector Space
+A basis of a vector space is a set of vectors that span the space and are independent. To span the space means that any point in the space can be expressed as a linear combination of the vectors. To be independent means that no vector in the set can be expressed as a linear combination of other vectors in the set.
+
+!!!Matrix Exponential
+The solution to a matrix differential equation {eq}x' = Ax{/eq} is given by {eq}x = e^{At}x(0){/eq}. The matrix exponential is defined as {eq}e^{At} = I + tA + \frac{t^2}{2!}A^2 + \frac{t^3}{3!}A^3{/eq}. To compute the matrix exponential, we diagonalize the matrix into {eq}A = PDP^{-1}{/eq} so that {eq}e^{At} = Pe^{Dt}P^{-1}{/eq}. For a diagonal matrix, the matrix exponential {eq}e^{Dt}{/eq} is simply a diagonal matrix whose ''i''th diagonal entry is {eq}e^{d_it}{/eq}, where {eq}d_i{/eq} is the ''i''th diagonal entry of {eq}D{/eq}.
+
+!!!Displacement Vectors
+If ''P'' and ''R'' are vectors with components {eq}P= \langle p_x, p_y \rangle{/eq} and {eq}R= \langle r_x, r_y \rangle{/eq}, then their displacement vector ''PR'' is given by {eq}PR = R - P =  \langle r_x, r_y \rangle - \langle p_x, p_y \rangle = \langle r_x-p_x, r_y-p_y \rangle{/eq}. If we know any two of ''P'', ''R'', and ''PR'', then we can solve for the remaining one.
+
+!!!Linear Models
+Often, the simplest way to predict a quantity is through a linear regression. Linear regression fits a line or plane to data by assigning a weight, or coefficient, to each factor, or variable. The model can be used to make decisions via cutoffs -- if the regression for some group of variables is above a cutoff, it is placed in one category, whereas if the regression for another group of variables is below the cutoff, it falls into a different category.
+
+
+!!!Euler's Formula
+Euler's formula is given by {eq}e^{ix} = \cos x + i\sin x{/eq}. For a simple proof of this fact, think about rearranging the Maclaurin series for the exponential function:
+{eq}e^{ix} = 1 + ix + \frac{(ix)^2}{2!} + \frac{(ix)^3}{3!} + \frac{(ix)^4}{4!} + \frac{(ix)^5}{5!} + ...{/eq}
+{eq}e^{ix} = 1 + ix - \frac{x^2}{2!} - i\frac{x^3}{3!} + \frac{x^4}{4!} + i\frac{x^5}{5!} - ...{/eq}
+{eq}e^{ix} = (1 - \frac{x^2}{2!} + \frac{x^4}{4!} - ...) + (ix - i\frac{x^3}{3!} + i\frac{x^5}{5!} - ...) {/eq}
+{eq}e^{ix} = (1 - \frac{x^2}{2!} + \frac{x^4}{4!} - ...) + i(x - \frac{x^3}{3!} + \frac{x^5}{5!} - ...) {/eq}
+{eq}e^{ix} = \cos{x} + i \sin{x}{/eq}
+'''
 
 ###############
 
